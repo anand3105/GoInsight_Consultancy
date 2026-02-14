@@ -35,7 +35,7 @@ export default function Hero({ onCtaClick }: HeroProps) {
   }, []);
 
   return (
-    <section className="h-[calc(100vh-200px)] relative flex items-center bg-gradient-to-b from-brand-light to-brand-background overflow-hidden">
+    <section className="min-h-[calc(100vh-200px)] relative flex items-center bg-gradient-to-b from-brand-light to-brand-background overflow-hidden py-8 lg:py-0">
       {/* Background Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#13192608_1px,transparent_1px),linear-gradient(to_bottom,#13192608_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
 
@@ -61,7 +61,7 @@ export default function Hero({ onCtaClick }: HeroProps) {
 
             {/* Subtext */}
             <motion.div
-              className="mb-6 max-w-lg"
+              className="mb-6 max-w-lg mx-auto lg:mx-0"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -118,12 +118,12 @@ export default function Hero({ onCtaClick }: HeroProps) {
 
           {/* Right Content - Image Carousel */}
           <motion.div
-            className="relative hidden lg:block"
+            className="relative"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <div className="relative">
+            <div className="relative max-w-sm mx-auto lg:max-w-none">
               {/* Main Image Container */}
               <AnimatePresence mode="wait">
                 <motion.div

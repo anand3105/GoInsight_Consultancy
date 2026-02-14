@@ -2,6 +2,7 @@
 
 import { ThemeProvider } from "@/context/ThemeContext";
 import EmailGateModal from "@/components/EmailGateModal";
+import MobileDesktopPrompt from "@/components/MobileDesktopPrompt";
 
 export default function DemoLayoutClient({
   children,
@@ -14,6 +15,7 @@ export default function DemoLayoutClient({
 
   return (
     <ThemeProvider>
+      <MobileDesktopPrompt />
       <EmailGateModal onSubmit={handleEmailSubmit} />
       {children}
     </ThemeProvider>
