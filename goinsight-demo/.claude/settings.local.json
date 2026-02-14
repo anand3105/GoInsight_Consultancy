@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(node scripts/generateExcelData.js:*)",
+      "Bash(npx next build:*)",
+      "Bash(git push:*)",
+      "Bash(git fetch:*)",
+      "Bash(GIT_SSH_COMMAND=\"ssh -i ~/.ssh/github-anand3105\" git push:*)",
+      "Bash(ssh:*)",
+      "Bash(git rebase -x \"git commit --amend --author=''anand3105 <gupta.anand3105@gmail.com>'' --no-edit\" HEAD~2)",
+      "Bash(git stash:*)",
+      "Bash(where:*)",
+      "Bash(npm i:*)",
+      "Bash(vercel whoami:*)",
+      "Bash(vercel login:*)"
+    ]
+  }
+}
