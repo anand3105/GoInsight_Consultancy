@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://goinsight.in"),
   title: "GoInsight - Analytics That Matter",
   description:
     "Explore industry-specific analytics dashboards with GoInsight. Navigate our data city to discover the perfect analytics solution for Retail, Finance, Healthcare, Manufacturing, Supply Chain, and Sales & Marketing.",

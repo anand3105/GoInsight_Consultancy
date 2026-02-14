@@ -267,7 +267,9 @@ export default function ContactPage() {
                   </h3>
                   <div className="flex items-center gap-2">
                     <a
-                      href="#"
+                      href="https://www.facebook.com/goinsight.in/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-8 h-8 bg-brand-primary rounded-lg flex items-center justify-center text-white hover:bg-brand-primary/90 transition-colors"
                       aria-label="Facebook"
                     >
@@ -276,7 +278,9 @@ export default function ContactPage() {
                       </svg>
                     </a>
                     <a
-                      href="#"
+                      href="https://x.com/goinsight_"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-8 h-8 bg-brand-primary rounded-lg flex items-center justify-center text-white hover:bg-brand-primary/90 transition-colors"
                       aria-label="X (Twitter)"
                     >
@@ -285,7 +289,9 @@ export default function ContactPage() {
                       </svg>
                     </a>
                     <a
-                      href="#"
+                      href="https://www.linkedin.com/company/goinsight/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-8 h-8 bg-brand-primary rounded-lg flex items-center justify-center text-white hover:bg-brand-primary/90 transition-colors"
                       aria-label="LinkedIn"
                     >

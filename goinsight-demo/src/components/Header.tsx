@@ -138,7 +138,9 @@ export default function Header() {
               {/* Social Icons */}
               <div className="flex items-center gap-3">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/goinsight.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-white hover:text-brand-yellow transition-colors"
                   aria-label="Facebook"
                 >
@@ -147,7 +149,9 @@ export default function Header() {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://x.com/goinsight_"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-white hover:text-brand-yellow transition-colors"
                   aria-label="X (Twitter)"
                 >
@@ -156,7 +160,9 @@ export default function Header() {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/goinsight/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-white hover:text-brand-yellow transition-colors"
                   aria-label="LinkedIn"
                 >
@@ -256,7 +262,9 @@ export default function Header() {
                   {/* Social Icons - Mobile */}
                   <div className="flex items-center gap-4 py-3">
                     <a
-                      href="#"
+                      href="https://www.facebook.com/goinsight.in/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-white hover:text-brand-yellow transition-colors"
                       aria-label="Facebook"
                     >
@@ -265,7 +273,9 @@ export default function Header() {
                       </svg>
                     </a>
                     <a
-                      href="#"
+                      href="https://x.com/goinsight_"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-white hover:text-brand-yellow transition-colors"
                       aria-label="X (Twitter)"
                     >
@@ -274,7 +284,9 @@ export default function Header() {
                       </svg>
                     </a>
                     <a
-                      href="#"
+                      href="https://www.linkedin.com/company/goinsight/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-white hover:text-brand-yellow transition-colors"
                       aria-label="LinkedIn"
                     >
