@@ -15,7 +15,10 @@
       "Bash(vercel whoami:*)",
       "Bash(vercel login:*)",
       "Bash(npx vercel:*)",
-      "Bash(echo:*)"
+      "Bash(echo:*)",
+      "Bash(curl:*)",
+      "Bash(npx tsc:*)",
+      "mcp__ide__getDiagnostics"
     ]
   }
 }

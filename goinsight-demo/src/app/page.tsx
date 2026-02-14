@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef } from "react";
-import Image from "next/image";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import TrustedBy from "@/components/TrustedBy";
@@ -11,6 +10,7 @@ import ProcessSection from "@/components/ProcessSection";
 import TechnologiesSection from "@/components/TechnologiesSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import DemoModal from "@/components/DemoModal";
+import Footer from "@/components/Footer";
 import { AnalyticsDomain } from "@/data/analytics-domains";
 
 export default function Home() {
@@ -62,43 +62,7 @@ export default function Home() {
       <ExperienceSection />
 
       {/* Footer */}
-      <footer className="bg-brand-primary text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center">
-              <Image
-                src="/Go-Insight-White_logo.png"
-                alt="GoInsight"
-                width={150}
-                height={40}
-                className="h-10 w-auto"
-              />
-            </div>
-
-            <nav className="flex flex-wrap justify-center gap-6 text-sm text-white/80">
-              <a href="#" className="hover:text-white transition-colors">
-                Features
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                Industries
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                Pricing
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                Documentation
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                Contact
-              </a>
-            </nav>
-
-            <p className="text-sm text-white/60">
-              © 2024 GoInsight. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
 
       {/* Demo Modal */}
       <DemoModal

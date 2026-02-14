@@ -23,6 +23,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const benefits = [
   {
@@ -636,40 +637,7 @@ export default function CareersPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-brand-primary text-white py-8">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center">
-              <Image
-                src="/Go-Insight-White_logo.png"
-                alt="GoInsight"
-                width={120}
-                height={32}
-                className="h-8 w-auto"
-              />
-            </div>
-
-            <nav className="flex flex-wrap justify-center gap-4 text-sm text-white/80">
-              <Link href="/" className="hover:text-white transition-colors">
-                Home
-              </Link>
-              <Link href="/about" className="hover:text-white transition-colors">
-                About
-              </Link>
-              <Link href="/careers" className="hover:text-white transition-colors">
-                Careers
-              </Link>
-              <Link href="/contact" className="hover:text-white transition-colors">
-                Contact
-              </Link>
-            </nav>
-
-            <p className="text-xs text-white/60">
-              © 2024 GoInsight. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }
