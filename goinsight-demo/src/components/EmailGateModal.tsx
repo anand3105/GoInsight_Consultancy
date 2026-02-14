@@ -53,7 +53,7 @@ export default function EmailGateModal({ onSubmit }: EmailGateModalProps) {
     return !personalDomains.includes(domain);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
 
@@ -72,12 +72,23 @@ export default function EmailGateModal({ onSubmit }: EmailGateModalProps) {
     // Save to session storage
     sessionStorage.setItem("goinsight_professional_email", email);
 
-    // Simulate a brief delay for UX
-    setTimeout(() => {
-      setIsLoading(false);
-      setIsOpen(false);
-      onSubmit(email);
-    }, 800);
+    // Send lead email notification
+    try {
+      await fetch("/api/demo-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email,
+          page: window.location.pathname,
+        }),
+      });
+    } catch {
+      // Don't block the user if notification fails
+    }
+
+    setIsLoading(false);
+    setIsOpen(false);
+    onSubmit(email);
   };
 
   return (
