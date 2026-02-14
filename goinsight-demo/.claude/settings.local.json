@@ -13,7 +13,9 @@
       "Bash(where:*)",
       "Bash(npm i:*)",
       "Bash(vercel whoami:*)",
-      "Bash(vercel login:*)"
+      "Bash(vercel login:*)",
+      "Bash(npx vercel:*)",
+      "Bash(echo:*)"
     ]
   }
 }

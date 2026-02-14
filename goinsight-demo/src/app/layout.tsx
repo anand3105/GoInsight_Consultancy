@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://goinsight.in"),
+  metadataBase: new URL(
+    process.env.VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+      : "http://localhost:3000"
+  ),
   title: "GoInsight - Analytics That Matter",
   description:
     "Explore industry-specific analytics dashboards with GoInsight. Navigate our data city to discover the perfect analytics solution for Retail, Finance, Healthcare, Manufacturing, Supply Chain, and Sales & Marketing.",

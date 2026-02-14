@@ -41,10 +41,10 @@ export default function Header() {
       >
         <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-1 text-[11px] sm:text-xs">
           <a
-            href="mailto:info@goinsight.in"
+            href="mailto:hello@goinsight.in"
             className="font-medium hover:text-brand-primary transition-colors"
           >
-            Get connect with us info@goinsight.in
+            Get connect with us hello@goinsight.in
           </a>
           <div className="flex items-center gap-3 sm:gap-5">
             <a

@@ -159,11 +159,23 @@ export default function ContactPage() {
 
     setIsSubmitting(true);
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-    setIsSubmitting(false);
-    setIsSuccess(true);
+      if (!res.ok) {
+        throw new Error("Failed to send");
+      }
+
+      setIsSuccess(true);
+    } catch {
+      alert("Something went wrong. Please email us directly at hello@goinsight.in");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleReset = () => {
@@ -212,7 +224,7 @@ export default function ContactPage() {
 
                 <div className="space-y-2">
                   <a
-                    href="mailto:info@goinsight.in"
+                    href="mailto:hello@goinsight.in"
                     className="flex items-center gap-3 p-2 rounded-lg hover:bg-brand-background transition-colors group"
                   >
                     <div className="w-8 h-8 bg-brand-yellow/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-brand-yellow/30 transition-colors">
@@ -220,7 +232,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-xs font-medium text-brand-dark">Email</p>
-                      <p className="text-brand-secondary text-sm">info@goinsight.in</p>
+                      <p className="text-brand-secondary text-sm">hello@goinsight.in</p>
                     </div>
                   </a>
 
@@ -645,8 +657,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-sm font-medium text-brand-dark">Still have questions?</p>
-                      <a href="mailto:info@goinsight.in" className="text-sm text-brand-secondary hover:text-brand-yellow transition-colors">
-                        info@goinsight.in
+                      <a href="mailto:hello@goinsight.in" className="text-sm text-brand-secondary hover:text-brand-yellow transition-colors">
+                        hello@goinsight.in
                       </a>
                     </div>
                   </div>

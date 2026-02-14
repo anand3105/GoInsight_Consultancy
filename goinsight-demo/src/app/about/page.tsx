@@ -611,10 +611,10 @@ export default function AboutPage() {
                   <ChevronRight className="w-4 h-4" />
                 </Link>
                 <a
-                  href="mailto:info@goinsight.in"
+                  href="mailto:hello@goinsight.in"
                   className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all border border-white/20"
                 >
-                  info@goinsight.in
+                  hello@goinsight.in
                 </a>
               </div>
             </div>
