@@ -25,21 +25,6 @@ const nextConfig = {
       },
     ];
   },
-  async redirects() {
-    return [
-      {
-        source: "/:path*",
-        has: [
-          {
-            type: "host",
-            value: "www.goinsight.in",
-          },
-        ],
-        destination: "https://goinsight.in/:path*",
-        permanent: true,
-      },
-    ];
-  },
 };
 
 module.exports = nextConfig;
