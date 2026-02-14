@@ -1,75 +1,41 @@
-"use client";
+import { createPageMetadata } from "@/lib/seo";
+import JsonLd from "@/components/JsonLd";
+import {
+  professionalServiceSchema,
+  websiteSchema,
+  breadcrumbSchema,
+} from "@/lib/schemas";
+import HomeContent from "./HomeContent";
 
-import { useState, useRef } from "react";
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import TrustedBy from "@/components/TrustedBy";
-import AnalyticsCity from "@/components/AnalyticsCity";
-import FeaturesSection from "@/components/FeaturesSection";
-import ProcessSection from "@/components/ProcessSection";
-import TechnologiesSection from "@/components/TechnologiesSection";
-import ExperienceSection from "@/components/ExperienceSection";
-import DemoModal from "@/components/DemoModal";
-import Footer from "@/components/Footer";
-import { AnalyticsDomain } from "@/data/analytics-domains";
+export const metadata = createPageMetadata({
+  title:
+    "GoInsight — Data Analytics Consulting & Business Intelligence Solutions",
+  description:
+    "GoInsight delivers enterprise analytics consulting, Power BI dashboards, AI/ML solutions, and data visualization. Serving retail, finance, healthcare, manufacturing, and 10+ industries globally. Book a free consultation.",
+  keywords: [
+    "analytics consulting firm",
+    "Power BI consulting India",
+    "enterprise dashboard development",
+    "data analytics company",
+    "business intelligence solutions",
+    "predictive analytics consulting",
+    "custom dashboard solutions",
+    "data-driven decision making",
+  ],
+  path: "",
+});
 
 export default function Home() {
-  const [selectedDomain, setSelectedDomain] = useState<AnalyticsDomain | null>(
-    null
-  );
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const cityRef = useRef<HTMLDivElement>(null);
-
-  const handleBuildingClick = (domain: AnalyticsDomain) => {
-    setSelectedDomain(domain);
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
-
-  const scrollToCity = () => {
-    cityRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
-    <main className="min-h-screen">
-      {/* Header */}
-      <Header />
-
-      {/* Hero Section */}
-      <Hero onCtaClick={scrollToCity} />
-
-      {/* Trusted By Section */}
-      <TrustedBy />
-
-      {/* Analytics City Section */}
-      <div ref={cityRef}>
-        <AnalyticsCity onBuildingClick={handleBuildingClick} />
-      </div>
-
-      {/* Features Section */}
-      <FeaturesSection />
-
-      {/* Process Section */}
-      <ProcessSection />
-
-      {/* Technologies Section */}
-      <TechnologiesSection />
-
-      {/* Experience Section */}
-      <ExperienceSection />
-
-      {/* Footer */}
-      <Footer />
-
-      {/* Demo Modal */}
-      <DemoModal
-        domain={selectedDomain}
-        isOpen={isModalOpen}
-        onClose={handleCloseModal}
+    <>
+      <HomeContent />
+      <JsonLd data={professionalServiceSchema()} />
+      <JsonLd data={websiteSchema()} />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", url: "https://goinsight.in" },
+        ])}
       />
-    </main>
+    </>
   );
 }

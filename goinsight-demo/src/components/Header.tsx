@@ -174,7 +174,7 @@ export default function Header() {
 
               {/* CTA Button */}
               <motion.a
-                href="#"
+                href="/contact"
                 className="px-5 py-2 text-sm bg-brand-yellow text-brand-dark font-semibold rounded-full hover:bg-yellow-400 transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
@@ -298,7 +298,7 @@ export default function Header() {
 
                   {/* CTA Button - Mobile */}
                   <a
-                    href="#"
+                    href="/contact"
                     className="block w-full text-center px-6 py-3 bg-brand-yellow text-brand-dark font-semibold rounded-full hover:bg-yellow-400 transition-colors"
                   >
                     Get Started Now

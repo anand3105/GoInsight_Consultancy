@@ -1,0 +1,72 @@
+# GoInsight — Data Analytics Consulting & Business Intelligence Solutions
+
+> GoInsight is an analytics consulting firm based in New Delhi, India, specializing in enterprise data analytics, Power BI dashboard development, AI/ML solutions, and data visualization across 10+ industries globally.
+
+## Company Overview
+
+- **Name:** GoInsight
+- **Website:** https://goinsight.in
+- **Founded:** 2022
+- **Founder:** Anand Gupta (Fortune 500 veteran)
+- **Location:** New Delhi, India
+- **Email:** hello@goinsight.in
+- **Phone:** +91-7042549224
+- **Registration:** MSME registered enterprise
+
+## Core Services
+
+- Analytics Consulting & Strategy
+- Power BI Dashboard Development
+- Custom Dashboard Solutions
+- AI/ML Solutions & Predictive Analytics
+- Data Visualization & Reporting
+- Data Warehousing & ETL
+- Corporate Training (Power BI, Data Analytics)
+- Business Intelligence Consulting
+
+## Industries Served
+
+- Retail & E-commerce
+- Finance & Banking
+- Healthcare & Life Sciences
+- Education & EdTech
+- Manufacturing & Industry 4.0
+- Supply Chain & Logistics
+- Sales & Marketing
+- Real Estate & Construction
+
+## Interactive Demo Dashboards
+
+Explore live analytics dashboards for each industry:
+
+- Retail: https://goinsight.in/demo/retail
+- Finance: https://goinsight.in/demo/finance
+- Healthcare: https://goinsight.in/demo/healthcare
+- Education: https://goinsight.in/demo/education
+- Manufacturing: https://goinsight.in/demo/manufacturing
+- Supply Chain: https://goinsight.in/demo/supply-chain
+- Sales & Marketing: https://goinsight.in/demo/sales-marketing
+- Real Estate: https://goinsight.in/demo/real-estate
+
+## Key Pages
+
+- Homepage: https://goinsight.in
+- About Us: https://goinsight.in/about
+- Contact / Book Consultation: https://goinsight.in/contact
+- Careers: https://goinsight.in/careers
+
+## Why Choose GoInsight
+
+- Team with Fortune 500 experience (Nokia, Nestle, HCL, Carrier, General Motors, Amul)
+- 50+ enterprise clients served
+- 100+ projects delivered
+- 95% client retention rate
+- 15+ years combined experience
+- End-to-end analytics solutions from strategy to implementation
+- Free initial consultation available
+
+## Social Media
+
+- LinkedIn: https://www.linkedin.com/company/goinsight/
+- Twitter/X: https://x.com/goinsight_
+- Facebook: https://www.facebook.com/goinsight.in/
