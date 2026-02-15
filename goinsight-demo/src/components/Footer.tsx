@@ -63,7 +63,7 @@ export default function Footer({ showCTA = true }: FooterProps) {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff06_1px,transparent_1px),linear-gradient(to_bottom,#ffffff06_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-yellow/[0.04] rounded-full blur-3xl pointer-events-none" />
 
-          <div className="container mx-auto px-4 py-12 md:py-16 relative z-10">
+          <div className="container mx-auto px-4 py-8 md:py-16 relative z-10">
             <div className="max-w-2xl mx-auto text-center">
               <motion.h2
                 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3"
@@ -119,16 +119,17 @@ export default function Footer({ showCTA = true }: FooterProps) {
       )}
 
       {/* Main Footer */}
-      <div className="bg-brand-primary pt-10 pb-6">
+      <div className="bg-brand-primary pt-8 pb-6">
         <div className="container mx-auto px-4">
           {/* Top separator when no CTA */}
           {!showCTA && (
             <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent -mt-10 mb-10" />
           )}
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 pb-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-6 pb-8">
             {/* Column 1 — Brand */}
             <motion.div
+              className="col-span-2 lg:col-span-1"
               custom={0}
               variants={columnVariants}
               initial="hidden"
@@ -213,6 +214,7 @@ export default function Footer({ showCTA = true }: FooterProps) {
 
             {/* Column 3 — Industries (2-col grid) */}
             <motion.div
+              className="col-span-2 lg:col-span-1"
               custom={2}
               variants={columnVariants}
               initial="hidden"
@@ -288,7 +290,7 @@ export default function Footer({ showCTA = true }: FooterProps) {
           </div>
 
           {/* Bottom Bar */}
-          <div className="border-t border-white/[0.06] pt-5 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="border-t border-white/[0.06] pt-5 flex flex-col md:flex-row items-center justify-between gap-3">
             <p className="text-xs text-white/30">
               &copy; {new Date().getFullYear()} GoInsight. All rights reserved.
             </p>
@@ -331,7 +333,7 @@ export default function Footer({ showCTA = true }: FooterProps) {
               ))}
             </div>
 
-            <div className="flex items-center gap-5">
+            <div className="flex items-center flex-wrap justify-center gap-x-5 gap-y-2">
               <Link
                 href="/privacy"
                 className="text-xs text-white/30 hover:text-brand-yellow transition-colors duration-200"
