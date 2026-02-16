@@ -191,6 +191,7 @@ export default function Footer({ showCTA = true }: FooterProps) {
 
             {/* Column 2 — Quick Links */}
             <motion.div
+              className="order-1 lg:order-none"
               custom={1}
               variants={columnVariants}
               initial="hidden"
@@ -214,7 +215,7 @@ export default function Footer({ showCTA = true }: FooterProps) {
 
             {/* Column 3 — Industries (2-col grid) */}
             <motion.div
-              className="col-span-2 lg:col-span-1"
+              className="col-span-2 lg:col-span-1 order-3 lg:order-none"
               custom={2}
               variants={columnVariants}
               initial="hidden"
@@ -238,6 +239,7 @@ export default function Footer({ showCTA = true }: FooterProps) {
 
             {/* Column 4 — Contact */}
             <motion.div
+              className="order-2 lg:order-none"
               custom={3}
               variants={columnVariants}
               initial="hidden"

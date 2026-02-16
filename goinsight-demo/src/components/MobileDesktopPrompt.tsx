@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Monitor, X } from "lucide-react";
+import { Monitor } from "lucide-react";
 import Link from "next/link";
 
 export default function MobileDesktopPrompt() {
@@ -42,15 +42,6 @@ export default function MobileDesktopPrompt() {
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
           >
-            {/* Close button */}
-            <button
-              onClick={() => setIsOpen(false)}
-              className="absolute top-3 right-3 p-1.5 rounded-full hover:bg-gray-100 transition-colors text-gray-400 hover:text-gray-600"
-              aria-label="Close"
-            >
-              <X size={18} />
-            </button>
-
             {/* Icon */}
             <div className="mx-auto w-16 h-16 bg-brand-sky/10 rounded-full flex items-center justify-center mb-4">
               <Monitor className="w-8 h-8 text-brand-sky" />
