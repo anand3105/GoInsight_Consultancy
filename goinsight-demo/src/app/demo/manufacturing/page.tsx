@@ -1,18 +1,24 @@
 import { createPageMetadata } from "@/lib/seo";
 import JsonLd from "@/components/JsonLd";
-import { breadcrumbSchema, softwareAppSchema } from "@/lib/schemas";
+import { breadcrumbSchema, serviceSchema } from "@/lib/schemas";
 import ManufacturingContent from "./ManufacturingContent";
 
 export const metadata = createPageMetadata({
-  title: "Manufacturing Analytics Dashboard — OEE & Production Insights",
+  title:
+    "Manufacturing Analytics Solutions India — OEE & Production Dashboard",
   description:
-    "Interactive manufacturing analytics dashboard by GoInsight. Track OEE, production efficiency, quality metrics, and equipment performance with real-time visualizations.",
+    "GoInsight's manufacturing analytics dashboard helps Indian manufacturers track OEE, production efficiency, quality metrics, and equipment performance with Power BI visualizations. Request a free demo.",
   keywords: [
     "manufacturing analytics",
+    "manufacturing analytics India",
     "OEE tracking",
     "production efficiency dashboard",
     "quality metrics dashboard",
     "factory analytics",
+    "manufacturing Power BI dashboard",
+    "production data visualization India",
+    "plant performance analytics",
+    "manufacturing business intelligence",
   ],
   path: "/demo/manufacturing",
 });
@@ -32,12 +38,12 @@ export default function ManufacturingDashboard() {
         ])}
       />
       <JsonLd
-        data={softwareAppSchema({
-          name: "GoInsight Manufacturing Analytics Dashboard",
+        data={serviceSchema({
+          name: "GoInsight Manufacturing Analytics Solutions",
           description:
-            "Interactive manufacturing analytics dashboard with OEE, production efficiency, and quality insights.",
+            "Manufacturing analytics consulting and Power BI dashboard development for OEE, production efficiency, and quality insights in India.",
           url: "https://goinsight.in/demo/manufacturing",
-          industry: "Manufacturing",
+          serviceType: "Manufacturing Analytics Consulting",
         })}
       />
     </>

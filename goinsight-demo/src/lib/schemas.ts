@@ -37,14 +37,6 @@ export function websiteSchema() {
     "@type": "WebSite",
     name: siteConfig.name,
     url: siteConfig.url,
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: `${siteConfig.url}/demo/{search_term_string}`,
-      },
-      "query-input": "required name=search_term_string",
-    },
   };
 }
 
@@ -64,7 +56,16 @@ export function professionalServiceSchema() {
       ...siteConfig.address,
     },
     priceRange: "$$",
-    areaServed: "Worldwide",
+    areaServed: [
+      {
+        "@type": "Country",
+        name: "India",
+      },
+      {
+        "@type": "Place",
+        name: "Worldwide",
+      },
+    ],
     serviceType: [
       "Analytics Consulting",
       "Power BI Dashboard Development",
@@ -134,6 +135,36 @@ export function softwareAppSchema({
     about: {
       "@type": "Thing",
       name: industry,
+    },
+  };
+}
+
+export function serviceSchema({
+  name,
+  description,
+  url,
+  serviceType,
+}: {
+  name: string;
+  description: string;
+  url: string;
+  serviceType: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name,
+    description,
+    url,
+    provider: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    serviceType,
+    areaServed: {
+      "@type": "Country",
+      name: "India",
     },
   };
 }

@@ -39,13 +39,16 @@ const faqs = [
 export const metadata = createPageMetadata({
   title: "Contact GoInsight — Book a Free Analytics Consultation",
   description:
-    "Get in touch with GoInsight for analytics consulting, Power BI development, and AI/ML solutions. Free consultation. Email: hello@goinsight.in | Phone: +91-7042549224.",
+    "Get in touch with GoInsight for analytics consulting, Power BI development, and AI/ML solutions in India. Free consultation available. Email: hello@goinsight.in | Phone: +91-7042549224 | New Delhi, India.",
   keywords: [
     "contact GoInsight",
     "analytics consultation",
     "Power BI consulting quote",
     "hire analytics consultant",
+    "hire analytics consultant India",
     "data analytics inquiry",
+    "free analytics consultation",
+    "analytics consulting New Delhi",
   ],
   path: "/contact",
 });

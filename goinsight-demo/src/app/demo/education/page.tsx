@@ -1,18 +1,24 @@
 import { createPageMetadata } from "@/lib/seo";
 import JsonLd from "@/components/JsonLd";
-import { breadcrumbSchema, softwareAppSchema } from "@/lib/schemas";
+import { breadcrumbSchema, serviceSchema } from "@/lib/schemas";
 import EducationContent from "./EducationContent";
 
 export const metadata = createPageMetadata({
-  title: "Education Analytics Dashboard — Student Performance Insights",
+  title:
+    "Education Analytics Solutions India — Student Performance Dashboard",
   description:
-    "Interactive education analytics dashboard by GoInsight. Track student performance, enrollment trends, institutional KPIs, and academic outcomes with real-time visualizations.",
+    "GoInsight's education analytics dashboard helps Indian institutions track student performance, enrollment trends, and academic outcomes with Power BI visualizations. Request a free demo.",
   keywords: [
     "education analytics dashboard",
+    "education analytics India",
     "student tracking",
     "institutional analytics",
     "academic performance dashboard",
     "enrollment analytics",
+    "education Power BI dashboard",
+    "student data visualization India",
+    "university analytics solution",
+    "education business intelligence",
   ],
   path: "/demo/education",
 });
@@ -29,12 +35,12 @@ export default function EducationDashboard() {
         ])}
       />
       <JsonLd
-        data={softwareAppSchema({
-          name: "GoInsight Education Analytics Dashboard",
+        data={serviceSchema({
+          name: "GoInsight Education Analytics Solutions",
           description:
-            "Interactive education analytics dashboard with student performance, enrollment, and institutional insights.",
+            "Education analytics consulting and Power BI dashboard development for student performance, enrollment, and institutional insights in India.",
           url: "https://goinsight.in/demo/education",
-          industry: "Education",
+          serviceType: "Education Analytics Consulting",
         })}
       />
     </>

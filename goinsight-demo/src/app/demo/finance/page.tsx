@@ -1,18 +1,23 @@
 import { createPageMetadata } from "@/lib/seo";
 import JsonLd from "@/components/JsonLd";
-import { breadcrumbSchema, softwareAppSchema } from "@/lib/schemas";
+import { breadcrumbSchema, serviceSchema } from "@/lib/schemas";
 import FinanceContent from "./FinanceContent";
 
 export const metadata = createPageMetadata({
-  title: "Finance Analytics Dashboard — Financial KPI & Risk Insights",
+  title: "Finance Analytics Solutions India — Financial KPI & Risk Dashboard",
   description:
-    "Interactive finance analytics dashboard by GoInsight. Monitor financial KPIs, risk metrics, revenue trends, and portfolio performance with real-time visualizations.",
+    "GoInsight's finance analytics dashboard helps Indian businesses monitor financial KPIs, risk metrics, revenue trends, and portfolio performance with Power BI visualizations. Request a free demo.",
   keywords: [
     "finance analytics dashboard",
+    "finance analytics India",
     "financial reporting dashboard",
     "CFO dashboard",
     "financial KPI tracking",
     "risk analytics",
+    "finance Power BI dashboard",
+    "financial data visualization India",
+    "revenue analytics solution",
+    "financial business intelligence",
   ],
   path: "/demo/finance",
 });
@@ -29,12 +34,12 @@ export default function FinanceDashboard() {
         ])}
       />
       <JsonLd
-        data={softwareAppSchema({
-          name: "GoInsight Finance Analytics Dashboard",
+        data={serviceSchema({
+          name: "GoInsight Finance Analytics Solutions",
           description:
-            "Interactive finance analytics dashboard with KPI tracking, risk metrics, and revenue insights.",
+            "Finance analytics consulting and Power BI dashboard development for KPI tracking, risk metrics, and revenue insights in India.",
           url: "https://goinsight.in/demo/finance",
-          industry: "Finance",
+          serviceType: "Finance Analytics Consulting",
         })}
       />
     </>

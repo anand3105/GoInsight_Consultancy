@@ -1,18 +1,24 @@
 import { createPageMetadata } from "@/lib/seo";
 import JsonLd from "@/components/JsonLd";
-import { breadcrumbSchema, softwareAppSchema } from "@/lib/schemas";
+import { breadcrumbSchema, serviceSchema } from "@/lib/schemas";
 import SupplyChainContent from "./SupplyChainContent";
 
 export const metadata = createPageMetadata({
-  title: "Supply Chain Analytics Dashboard — Logistics & Delivery Tracking",
+  title:
+    "Supply Chain Analytics Solutions India — Logistics & Delivery Dashboard",
   description:
-    "Interactive supply chain analytics dashboard by GoInsight. Track logistics, delivery optimization, warehouse metrics, and fulfillment KPIs with real-time visualizations.",
+    "GoInsight's supply chain analytics dashboard helps Indian businesses optimize logistics, delivery tracking, warehouse metrics, and fulfillment KPIs with Power BI visualizations. Request a free demo.",
   keywords: [
     "supply chain analytics",
+    "supply chain analytics India",
     "logistics dashboard",
     "delivery optimization",
     "warehouse analytics",
     "fulfillment tracking",
+    "supply chain Power BI dashboard",
+    "logistics data visualization India",
+    "inventory management analytics",
+    "supply chain business intelligence",
   ],
   path: "/demo/supply-chain",
 });
@@ -32,12 +38,12 @@ export default function SupplyChainDashboard() {
         ])}
       />
       <JsonLd
-        data={softwareAppSchema({
-          name: "GoInsight Supply Chain Analytics Dashboard",
+        data={serviceSchema({
+          name: "GoInsight Supply Chain Analytics Solutions",
           description:
-            "Interactive supply chain analytics dashboard with logistics, delivery, and warehouse insights.",
+            "Supply chain analytics consulting and Power BI dashboard development for logistics, delivery, and warehouse insights in India.",
           url: "https://goinsight.in/demo/supply-chain",
-          industry: "Supply Chain & Logistics",
+          serviceType: "Supply Chain Analytics Consulting",
         })}
       />
     </>

@@ -7,16 +7,20 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://goinsight.in"),
   title: {
     default:
-      "GoInsight — Data Analytics Consulting & Business Intelligence Solutions",
+      "GoInsight — Data Analytics Consulting & Business Intelligence Solutions India",
     template: "%s | GoInsight",
   },
   description:
-    "GoInsight delivers enterprise analytics consulting, Power BI dashboards, AI/ML solutions, and data visualization. Serving retail, finance, healthcare & 10+ industries globally.",
+    "GoInsight delivers enterprise analytics consulting, Power BI dashboards, AI/ML solutions, and data visualization in India. Serving retail, finance, healthcare & 10+ industries. Book a free consultation.",
   keywords: [
     "analytics consulting",
+    "analytics consulting India",
     "data analytics",
+    "data analytics company India",
     "business intelligence",
+    "business intelligence India",
     "Power BI dashboard",
+    "Power BI consulting India",
     "data visualization",
     "GoInsight",
     "AI ML solutions",
@@ -32,9 +36,10 @@ export const metadata: Metadata = {
     "supply chain analytics",
     "education analytics",
     "real estate analytics",
-    "analytics consulting India",
     "Power BI consulting",
     "data strategy",
+    "analytics company New Delhi",
+    "hire data analyst India",
   ],
   authors: [{ name: "GoInsight Team" }],
   openGraph: {
@@ -52,7 +57,7 @@ export const metadata: Metadata = {
         alt: "GoInsight — Data Analytics Consulting",
       },
     ],
-    locale: "en_US",
+    locale: "en_IN",
     type: "website",
   },
   twitter: {
@@ -78,8 +83,11 @@ export const metadata: Metadata = {
   icons: {
     icon: "/icon.png",
   },
+  alternates: {
+    canonical: "https://goinsight.in",
+  },
   verification: {
-    google: "GOOGLE_SEARCH_CONSOLE_VERIFICATION",
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
     // other: { "msvalidate.01": "BING_WEBMASTER_VERIFICATION" },
   },
 };

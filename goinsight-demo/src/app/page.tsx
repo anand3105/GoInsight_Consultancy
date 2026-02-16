@@ -9,18 +9,23 @@ import HomeContent from "./HomeContent";
 
 export const metadata = createPageMetadata({
   title:
-    "GoInsight — Data Analytics Consulting & Business Intelligence Solutions",
+    "GoInsight — Data Analytics Consulting & Business Intelligence Solutions India",
   description:
-    "GoInsight delivers enterprise analytics consulting, Power BI dashboards, AI/ML solutions, and data visualization. Serving retail, finance, healthcare, manufacturing, and 10+ industries globally. Book a free consultation.",
+    "GoInsight is India's leading analytics consulting firm. We deliver Power BI dashboards, AI/ML solutions, and data visualization for retail, finance, healthcare & 10+ industries. Book a free consultation today.",
   keywords: [
     "analytics consulting firm",
+    "analytics consulting firm India",
     "Power BI consulting India",
     "enterprise dashboard development",
     "data analytics company",
+    "data analytics company India",
     "business intelligence solutions",
+    "business intelligence solutions India",
     "predictive analytics consulting",
     "custom dashboard solutions",
     "data-driven decision making",
+    "hire data analyst India",
+    "analytics company New Delhi",
   ],
   path: "",
 });

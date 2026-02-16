@@ -1,18 +1,24 @@
 import { createPageMetadata } from "@/lib/seo";
 import JsonLd from "@/components/JsonLd";
-import { breadcrumbSchema, softwareAppSchema } from "@/lib/schemas";
+import { breadcrumbSchema, serviceSchema } from "@/lib/schemas";
 import HealthcareContent from "./HealthcareContent";
 
 export const metadata = createPageMetadata({
-  title: "Healthcare Analytics Dashboard — Patient & Operations Insights",
+  title:
+    "Healthcare Analytics Solutions India — Patient & Hospital Dashboard",
   description:
-    "Interactive healthcare analytics dashboard by GoInsight. Track patient outcomes, hospital operations, bed occupancy, and clinical KPIs with real-time visualizations.",
+    "GoInsight's healthcare analytics dashboard helps Indian hospitals track patient outcomes, bed occupancy, clinical KPIs, and operational efficiency with Power BI visualizations. Request a free demo.",
   keywords: [
     "healthcare analytics dashboard",
+    "healthcare analytics India",
     "hospital performance",
     "patient analytics",
     "clinical KPI dashboard",
     "health operations analytics",
+    "healthcare Power BI dashboard",
+    "hospital data visualization India",
+    "patient outcome analytics",
+    "healthcare business intelligence",
   ],
   path: "/demo/healthcare",
 });
@@ -29,12 +35,12 @@ export default function HealthcareDashboard() {
         ])}
       />
       <JsonLd
-        data={softwareAppSchema({
-          name: "GoInsight Healthcare Analytics Dashboard",
+        data={serviceSchema({
+          name: "GoInsight Healthcare Analytics Solutions",
           description:
-            "Interactive healthcare analytics dashboard with patient outcomes, operations, and clinical KPI insights.",
+            "Healthcare analytics consulting and Power BI dashboard development for patient outcomes, operations, and clinical KPI insights in India.",
           url: "https://goinsight.in/demo/healthcare",
-          industry: "Healthcare",
+          serviceType: "Healthcare Analytics Consulting",
         })}
       />
     </>

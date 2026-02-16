@@ -1,18 +1,23 @@
 import { createPageMetadata } from "@/lib/seo";
 import JsonLd from "@/components/JsonLd";
-import { breadcrumbSchema, softwareAppSchema } from "@/lib/schemas";
+import { breadcrumbSchema, serviceSchema } from "@/lib/schemas";
 import RetailContent from "./RetailContent";
 
 export const metadata = createPageMetadata({
-  title: "Retail Analytics Dashboard — Sales & Inventory Insights",
+  title: "Retail Analytics Solutions India — Sales & Inventory Dashboard",
   description:
-    "Interactive retail analytics dashboard by GoInsight. Track sales performance, inventory turnover, store KPIs, and customer behavior with real-time Power BI visualizations.",
+    "GoInsight's retail analytics dashboard helps Indian retailers track sales performance, inventory turnover, store KPIs, and customer behavior with Power BI visualizations. Request a free demo.",
   keywords: [
     "retail analytics dashboard",
+    "retail analytics India",
     "store performance analytics",
     "retail KPI",
     "inventory analytics",
     "sales performance dashboard",
+    "retail Power BI dashboard",
+    "retail data visualization India",
+    "store analytics solution",
+    "retail business intelligence",
   ],
   path: "/demo/retail",
 });
@@ -29,12 +34,12 @@ export default function RetailDashboard() {
         ])}
       />
       <JsonLd
-        data={softwareAppSchema({
-          name: "GoInsight Retail Analytics Dashboard",
+        data={serviceSchema({
+          name: "GoInsight Retail Analytics Solutions",
           description:
-            "Interactive retail analytics dashboard with sales, inventory, and store performance insights.",
+            "Retail analytics consulting and Power BI dashboard development for sales, inventory, and store performance insights in India.",
           url: "https://goinsight.in/demo/retail",
-          industry: "Retail",
+          serviceType: "Retail Analytics Consulting",
         })}
       />
     </>

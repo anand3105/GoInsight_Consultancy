@@ -25,9 +25,12 @@ export const siteConfig = {
 
 const baseKeywords = [
   "analytics consulting",
+  "analytics consulting India",
   "data analytics",
+  "data analytics company India",
   "business intelligence",
   "Power BI dashboard",
+  "Power BI consulting India",
   "data visualization",
   "GoInsight",
   "AI ML solutions",
@@ -70,7 +73,7 @@ export function createPageMetadata({
           alt: `${siteConfig.name} — Data Analytics Consulting`,
         },
       ],
-      locale: "en_US",
+      locale: "en_IN",
       type: ogType,
     },
     twitter: {
