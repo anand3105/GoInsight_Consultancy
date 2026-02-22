@@ -120,6 +120,21 @@ export default function Header() {
               </div>
 
               <Link
+                href="/roi-analytics"
+                className="relative text-white font-medium hover:text-brand-yellow transition-colors"
+              >
+                ROI Report
+                <span className="absolute -top-2 -right-8 px-1.5 py-0.5 text-[9px] font-bold bg-brand-yellow text-brand-dark rounded-full leading-none">
+                  NEW
+                </span>
+              </Link>
+              <Link
+                href="/blog"
+                className="text-white font-medium hover:text-brand-yellow transition-colors"
+              >
+                Blog
+              </Link>
+              <Link
                 href="/#services"
                 className="text-white font-medium hover:text-brand-yellow transition-colors"
               >
@@ -246,6 +261,21 @@ export default function Header() {
                     </AnimatePresence>
                   </div>
 
+                  <Link
+                    href="/roi-analytics"
+                    className="flex items-center gap-2 py-2 text-white font-medium hover:text-brand-yellow"
+                  >
+                    ROI Report
+                    <span className="px-1.5 py-0.5 text-[9px] font-bold bg-brand-yellow text-brand-dark rounded-full leading-none">
+                      NEW
+                    </span>
+                  </Link>
+                  <Link
+                    href="/blog"
+                    className="block py-2 text-white font-medium hover:text-brand-yellow"
+                  >
+                    Blog
+                  </Link>
                   <Link
                     href="/#services"
                     className="block py-2 text-white font-medium hover:text-brand-yellow"

@@ -2,17 +2,18 @@ import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://goinsight.in";
+  const today = new Date().toISOString().split("T")[0];
 
   return [
     {
       url: baseUrl,
-      lastModified: "2026-02-16",
+      lastModified: today,
       changeFrequency: "weekly",
       priority: 1.0,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: "2026-02-16",
+      lastModified: today,
       changeFrequency: "monthly",
       priority: 0.8,
     },
@@ -29,53 +30,98 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
     {
+      url: `${baseUrl}/roi-analytics`,
+      lastModified: today,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    // Industry demo pages — SEO-targeted landing pages
+    {
       url: `${baseUrl}/demo/retail`,
-      lastModified: "2026-02-16",
+      lastModified: today,
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/demo/finance`,
-      lastModified: "2026-02-16",
+      lastModified: today,
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/demo/healthcare`,
-      lastModified: "2026-02-16",
+      lastModified: today,
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/demo/education`,
-      lastModified: "2026-02-16",
+      lastModified: today,
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/demo/manufacturing`,
-      lastModified: "2026-02-16",
+      lastModified: today,
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/demo/supply-chain`,
-      lastModified: "2026-02-16",
+      lastModified: today,
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/demo/sales-marketing`,
-      lastModified: "2026-02-16",
+      lastModified: today,
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/demo/real-estate`,
-      lastModified: "2026-02-16",
+      lastModified: today,
       changeFrequency: "monthly",
       priority: 0.9,
     },
+    // Blog
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: today,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/data-analytics-transforming-business-2026`,
+      lastModified: today,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/power-bi-vs-tableau`,
+      lastModified: today,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/ai-powered-analytics-machine-learning-bi`,
+      lastModified: today,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/data-analytics-consulting-dubai-middle-east`,
+      lastModified: today,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/top-10-kpi-dashboards-2026`,
+      lastModified: today,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    // Legal pages
     {
       url: `${baseUrl}/privacy`,
       lastModified: "2025-06-01",

@@ -62,8 +62,40 @@ export function professionalServiceSchema() {
         name: "India",
       },
       {
+        "@type": "Country",
+        name: "United Arab Emirates",
+      },
+      {
+        "@type": "Country",
+        name: "Saudi Arabia",
+      },
+      {
+        "@type": "Country",
+        name: "Australia",
+      },
+      {
+        "@type": "Country",
+        name: "Qatar",
+      },
+      {
+        "@type": "Country",
+        name: "Bahrain",
+      },
+      {
+        "@type": "Country",
+        name: "Kuwait",
+      },
+      {
+        "@type": "Country",
+        name: "Oman",
+      },
+      {
         "@type": "Place",
-        name: "Worldwide",
+        name: "Middle East",
+      },
+      {
+        "@type": "Place",
+        name: "MENA Region",
       },
     ],
     serviceType: [
@@ -139,6 +171,55 @@ export function softwareAppSchema({
   };
 }
 
+export function articleSchema({
+  title,
+  description,
+  url,
+  datePublished,
+  dateModified,
+  authorName,
+  imageUrl,
+  keywords,
+}: {
+  title: string;
+  description: string;
+  url: string;
+  datePublished: string;
+  dateModified: string;
+  authorName: string;
+  imageUrl: string;
+  keywords: string[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    url,
+    datePublished,
+    dateModified,
+    author: {
+      "@type": "Person",
+      name: authorName,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteConfig.url}/Go-Insight-Color_ICON.png`,
+      },
+    },
+    image: imageUrl,
+    keywords: keywords.join(", "),
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url,
+    },
+  };
+}
+
 export function serviceSchema({
   name,
   description,
@@ -162,9 +243,12 @@ export function serviceSchema({
       url: siteConfig.url,
     },
     serviceType,
-    areaServed: {
-      "@type": "Country",
-      name: "India",
-    },
+    areaServed: [
+      { "@type": "Country", name: "India" },
+      { "@type": "Country", name: "United Arab Emirates" },
+      { "@type": "Country", name: "Saudi Arabia" },
+      { "@type": "Country", name: "Australia" },
+      { "@type": "Place", name: "Middle East" },
+    ],
   };
 }
