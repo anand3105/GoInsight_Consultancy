@@ -7,28 +7,31 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://goinsight.in"),
   title: {
     default:
-      "GoInsight — Data Analytics Consulting & Business Intelligence Solutions India",
+      "GoInsight — Data Analytics Consulting & BI Solutions | India, Dubai, UAE, Australia",
     template: "%s | GoInsight",
   },
   description:
-    "GoInsight delivers enterprise analytics consulting, Power BI dashboards, AI/ML solutions, and data visualization in India. Serving retail, finance, healthcare & 10+ industries. Book a free consultation.",
+    "GoInsight delivers data analytics consulting, Power BI dashboards, AI/ML solutions & data visualization across India, Dubai, UAE, Saudi Arabia, MENA & Australia. 10+ industries. Book a free consultation.",
   keywords: [
-    "analytics consulting",
-    "analytics consulting India",
-    "data analytics",
-    "data analytics company India",
-    "business intelligence",
-    "business intelligence India",
-    "Power BI dashboard",
-    "Power BI consulting India",
-    "data visualization",
+    // Brand
     "GoInsight",
+    "GoInsight Consultancy",
+    // Core services
+    "analytics consulting",
+    "data analytics",
+    "business intelligence",
+    "Power BI dashboard",
+    "Power BI consulting",
+    "data visualization",
     "AI ML solutions",
     "data-driven decisions",
     "enterprise analytics",
     "predictive analytics",
     "custom dashboard development",
     "data warehousing",
+    "Tableau consulting",
+    "data strategy",
+    // Industry
     "retail analytics",
     "finance analytics",
     "healthcare analytics",
@@ -36,17 +39,38 @@ export const metadata: Metadata = {
     "supply chain analytics",
     "education analytics",
     "real estate analytics",
-    "Power BI consulting",
-    "data strategy",
+    // India
+    "analytics consulting India",
+    "data analytics company India",
+    "Power BI consulting India",
+    "business intelligence India",
     "analytics company New Delhi",
     "hire data analyst India",
+    // UAE / Dubai / Abu Dhabi
+    "data analytics consulting Dubai",
+    "data analytics company UAE",
+    "Power BI consulting Dubai",
+    "business intelligence consulting Dubai",
+    "analytics consulting Abu Dhabi",
+    "dashboard development Dubai",
+    // Middle East / MENA / Saudi Arabia
+    "data analytics consulting Saudi Arabia",
+    "business intelligence consulting Middle East",
+    "Power BI consulting Saudi Arabia",
+    "analytics consulting MENA",
+    // Australia
+    "data analytics consulting Australia",
+    "data analytics company Sydney",
+    "Power BI consulting Australia",
+    "business intelligence consulting Australia",
+    "data analytics company Melbourne",
   ],
   authors: [{ name: "GoInsight Team" }],
   openGraph: {
     title:
-      "GoInsight — Data Analytics Consulting & Business Intelligence Solutions",
+      "GoInsight — Data Analytics Consulting & BI Solutions | India, Dubai, UAE, Australia",
     description:
-      "Enterprise analytics consulting, Power BI dashboards, AI/ML solutions & data visualization across 10+ industries.",
+      "Enterprise analytics consulting, Power BI dashboards, AI/ML solutions & data visualization across India, UAE, Middle East & Australia.",
     url: "https://goinsight.in",
     siteName: "GoInsight",
     images: [
@@ -54,18 +78,19 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "GoInsight — Data Analytics Consulting",
+        alt: "GoInsight — Data Analytics Consulting India, Dubai, UAE, Australia",
       },
     ],
     locale: "en_IN",
+    alternateLocale: ["en_AE", "en_AU", "en_SA"],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "GoInsight — Data Analytics Consulting & Business Intelligence Solutions",
+      "GoInsight — Data Analytics Consulting | India, Dubai, UAE, MENA, Australia",
     description:
-      "Enterprise analytics consulting, Power BI dashboards, AI/ML solutions & data visualization across 10+ industries.",
+      "Enterprise analytics consulting, Power BI dashboards, AI/ML solutions & data visualization across India, UAE, Middle East & Australia.",
     site: "@goinsight_",
     creator: "@goinsight_",
   },
@@ -85,6 +110,13 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://goinsight.in",
+    languages: {
+      "en-IN": "https://goinsight.in",
+      "en-AE": "https://goinsight.in",
+      "en-AU": "https://goinsight.in",
+      "en-SA": "https://goinsight.in",
+      "x-default": "https://goinsight.in",
+    },
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",

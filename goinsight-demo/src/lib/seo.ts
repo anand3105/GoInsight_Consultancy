@@ -24,17 +24,46 @@ export const siteConfig = {
 };
 
 const baseKeywords = [
+  // Brand
+  "GoInsight",
+  "GoInsight Consultancy",
+  // Core services
   "analytics consulting",
-  "analytics consulting India",
   "data analytics",
-  "data analytics company India",
   "business intelligence",
   "Power BI dashboard",
-  "Power BI consulting India",
+  "Power BI consulting",
   "data visualization",
-  "GoInsight",
   "AI ML solutions",
   "data-driven decisions",
+  "custom dashboard development",
+  "Tableau consulting",
+  // India
+  "analytics consulting India",
+  "data analytics company India",
+  "data analytics consulting India",
+  "business intelligence consulting India",
+  "Power BI consulting India",
+  "data visualization services India",
+  "dashboard development services India",
+  "Tableau consulting India",
+  // UAE / Dubai / Abu Dhabi
+  "data analytics consulting Dubai",
+  "data analytics company UAE",
+  "Power BI consulting Dubai",
+  "business intelligence consulting Dubai",
+  "analytics consulting Abu Dhabi",
+  "dashboard development Dubai",
+  // Middle East / MENA / Saudi Arabia
+  "data analytics consulting Saudi Arabia",
+  "business intelligence consulting Middle East",
+  "Power BI consulting Saudi Arabia",
+  "analytics consulting MENA",
+  // Australia
+  "data analytics consulting Australia",
+  "Power BI consulting Australia",
+  "data analytics company Sydney",
+  "business intelligence consulting Australia",
 ];
 
 export function createPageMetadata({
@@ -70,10 +99,11 @@ export function createPageMetadata({
           url: "/og-image.png",
           width: 1200,
           height: 630,
-          alt: `${siteConfig.name} — Data Analytics Consulting`,
+          alt: `${siteConfig.name} — Data Analytics Consulting India, Dubai, UAE, Australia`,
         },
       ],
       locale: "en_IN",
+      alternateLocale: ["en_AE", "en_AU", "en_SA"],
       type: ogType,
     },
     twitter: {

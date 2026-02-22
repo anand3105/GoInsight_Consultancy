@@ -18,7 +18,30 @@
       "Bash(echo:*)",
       "Bash(curl:*)",
       "Bash(npx tsc:*)",
-      "mcp__ide__getDiagnostics"
+      "mcp__ide__getDiagnostics",
+      "WebSearch",
+      "WebFetch(domain:www.seopital.co)",
+      "WebFetch(domain:www.tacmind.com)",
+      "Bash(grep:*)",
+      "Bash(for dir in retail finance healthcare education manufacturing supply-chain sales-marketing real-estate)",
+      "Bash(do cp \"src/app/demo/$dir/page.tsx\" \"src/app/demo/$dir/TempContent.tsx\")",
+      "Bash(done)",
+      "Bash(npm run build:*)",
+      "Bash(npx rimraf:*)",
+      "Bash(taskkill:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(npx next:*)",
+      "Bash(node --version:*)",
+      "Bash(nvm version:*)",
+      "Bash(fnm:*)",
+      "Bash(nvm list:*)",
+      "Bash(winget:*)",
+      "Bash(choco:*)",
+      "Bash(node:*)",
+      "Bash(tasklist:*)",
+      "WebFetch(domain:goinsight.in)",
+      "Bash(tail:*)"
     ]
   }
 }

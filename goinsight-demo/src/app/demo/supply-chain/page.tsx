@@ -5,9 +5,9 @@ import SupplyChainContent from "./SupplyChainContent";
 
 export const metadata = createPageMetadata({
   title:
-    "Supply Chain Analytics Solutions India — Logistics & Delivery Dashboard",
+    "Supply Chain Analytics Solutions — Logistics Dashboard | India, Dubai, UAE, Australia",
   description:
-    "GoInsight's supply chain analytics dashboard helps Indian businesses optimize logistics, delivery tracking, warehouse metrics, and fulfillment KPIs with Power BI visualizations. Request a free demo.",
+    "GoInsight's supply chain analytics dashboard helps businesses across India, Dubai, UAE, Saudi Arabia & Australia optimize logistics, warehouse metrics with Power BI. Request a free demo.",
   keywords: [
     "supply chain analytics",
     "supply chain analytics India",
@@ -19,6 +19,11 @@ export const metadata = createPageMetadata({
     "logistics data visualization India",
     "inventory management analytics",
     "supply chain business intelligence",
+    "supply chain analytics Dubai",
+    "supply chain analytics UAE",
+    "logistics analytics Middle East",
+    "supply chain analytics Saudi Arabia",
+    "supply chain analytics Australia",
   ],
   path: "/demo/supply-chain",
 });

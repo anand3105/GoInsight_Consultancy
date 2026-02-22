@@ -5,9 +5,9 @@ import RealEstateContent from "./RealEstateContent";
 
 export const metadata = createPageMetadata({
   title:
-    "Real Estate Analytics Solutions India — Property Portfolio Dashboard",
+    "Real Estate Analytics Solutions — Property Dashboard | India, Dubai, UAE, Australia",
   description:
-    "GoInsight's real estate analytics dashboard helps Indian developers and investors track property portfolio, construction progress, occupancy rates, and investment KPIs with Power BI visualizations. Request a free demo.",
+    "GoInsight's real estate analytics dashboard helps developers across India, Dubai, UAE, Saudi Arabia & Australia track property portfolio, occupancy, and investment KPIs with Power BI. Request a free demo.",
   keywords: [
     "real estate analytics",
     "real estate analytics India",
@@ -19,6 +19,11 @@ export const metadata = createPageMetadata({
     "property data visualization India",
     "real estate investment analytics",
     "real estate business intelligence",
+    "real estate analytics Dubai",
+    "real estate analytics UAE",
+    "property analytics Middle East",
+    "real estate analytics Saudi Arabia",
+    "real estate analytics Australia",
   ],
   path: "/demo/real-estate",
 });

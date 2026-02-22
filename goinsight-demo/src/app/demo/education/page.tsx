@@ -5,9 +5,9 @@ import EducationContent from "./EducationContent";
 
 export const metadata = createPageMetadata({
   title:
-    "Education Analytics Solutions India — Student Performance Dashboard",
+    "Education Analytics Solutions — Student Performance Dashboard | India, Dubai, UAE, Australia",
   description:
-    "GoInsight's education analytics dashboard helps Indian institutions track student performance, enrollment trends, and academic outcomes with Power BI visualizations. Request a free demo.",
+    "GoInsight's education analytics dashboard helps institutions across India, Dubai, UAE, Saudi Arabia & Australia track student performance, enrollment trends with Power BI. Request a free demo.",
   keywords: [
     "education analytics dashboard",
     "education analytics India",
@@ -19,6 +19,11 @@ export const metadata = createPageMetadata({
     "student data visualization India",
     "university analytics solution",
     "education business intelligence",
+    "education analytics Dubai",
+    "education analytics UAE",
+    "education analytics Saudi Arabia",
+    "education analytics Middle East",
+    "education analytics Australia",
   ],
   path: "/demo/education",
 });

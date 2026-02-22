@@ -4,9 +4,9 @@ import { breadcrumbSchema, serviceSchema } from "@/lib/schemas";
 import RetailContent from "./RetailContent";
 
 export const metadata = createPageMetadata({
-  title: "Retail Analytics Solutions India — Sales & Inventory Dashboard",
+  title: "Retail Analytics Solutions — Sales & Inventory Dashboard | India, Dubai, UAE, Australia",
   description:
-    "GoInsight's retail analytics dashboard helps Indian retailers track sales performance, inventory turnover, store KPIs, and customer behavior with Power BI visualizations. Request a free demo.",
+    "GoInsight's retail analytics dashboard helps retailers across India, Dubai, UAE, Saudi Arabia & Australia track sales performance, inventory turnover, store KPIs with Power BI. Request a free demo.",
   keywords: [
     "retail analytics dashboard",
     "retail analytics India",
@@ -18,6 +18,12 @@ export const metadata = createPageMetadata({
     "retail data visualization India",
     "store analytics solution",
     "retail business intelligence",
+    "retail analytics Dubai",
+    "retail analytics UAE",
+    "retail analytics Middle East",
+    "retail analytics Saudi Arabia",
+    "retail analytics Australia",
+    "retail dashboard development Dubai",
   ],
   path: "/demo/retail",
 });

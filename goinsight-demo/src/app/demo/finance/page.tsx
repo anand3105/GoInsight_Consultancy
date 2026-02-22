@@ -4,9 +4,9 @@ import { breadcrumbSchema, serviceSchema } from "@/lib/schemas";
 import FinanceContent from "./FinanceContent";
 
 export const metadata = createPageMetadata({
-  title: "Finance Analytics Solutions India — Financial KPI & Risk Dashboard",
+  title: "Finance Analytics Solutions — Financial KPI Dashboard | India, Dubai, UAE, Australia",
   description:
-    "GoInsight's finance analytics dashboard helps Indian businesses monitor financial KPIs, risk metrics, revenue trends, and portfolio performance with Power BI visualizations. Request a free demo.",
+    "GoInsight's finance analytics dashboard helps businesses across India, Dubai, UAE, Saudi Arabia & Australia monitor financial KPIs, risk metrics, and revenue trends with Power BI. Request a free demo.",
   keywords: [
     "finance analytics dashboard",
     "finance analytics India",
@@ -18,6 +18,11 @@ export const metadata = createPageMetadata({
     "financial data visualization India",
     "revenue analytics solution",
     "financial business intelligence",
+    "finance analytics Dubai",
+    "finance analytics UAE",
+    "financial dashboard Middle East",
+    "finance analytics Saudi Arabia",
+    "finance analytics Australia",
   ],
   path: "/demo/finance",
 });

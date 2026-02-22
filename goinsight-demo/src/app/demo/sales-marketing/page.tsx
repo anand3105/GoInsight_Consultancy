@@ -5,9 +5,9 @@ import SalesMarketingContent from "./SalesMarketingContent";
 
 export const metadata = createPageMetadata({
   title:
-    "Sales & Marketing Analytics Solutions India — Campaign ROI Dashboard",
+    "Sales & Marketing Analytics — Campaign ROI Dashboard | India, Dubai, UAE, Australia",
   description:
-    "GoInsight's sales & marketing analytics dashboard helps Indian businesses track campaign ROI, sales pipeline, lead conversion, and marketing performance with Power BI visualizations. Request a free demo.",
+    "GoInsight's sales & marketing analytics dashboard helps businesses across India, Dubai, UAE, Saudi Arabia & Australia track campaign ROI, sales pipeline with Power BI. Request a free demo.",
   keywords: [
     "sales analytics dashboard",
     "sales analytics India",
@@ -19,6 +19,11 @@ export const metadata = createPageMetadata({
     "sales data visualization India",
     "digital marketing analytics",
     "sales business intelligence",
+    "sales analytics Dubai",
+    "sales analytics UAE",
+    "marketing analytics Middle East",
+    "sales analytics Saudi Arabia",
+    "sales analytics Australia",
   ],
   path: "/demo/sales-marketing",
 });

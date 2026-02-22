@@ -5,9 +5,9 @@ import HealthcareContent from "./HealthcareContent";
 
 export const metadata = createPageMetadata({
   title:
-    "Healthcare Analytics Solutions India — Patient & Hospital Dashboard",
+    "Healthcare Analytics Solutions — Patient & Hospital Dashboard | India, Dubai, UAE, Australia",
   description:
-    "GoInsight's healthcare analytics dashboard helps Indian hospitals track patient outcomes, bed occupancy, clinical KPIs, and operational efficiency with Power BI visualizations. Request a free demo.",
+    "GoInsight's healthcare analytics dashboard helps hospitals across India, Dubai, UAE, Saudi Arabia & Australia track patient outcomes, clinical KPIs, and operational efficiency. Request a free demo.",
   keywords: [
     "healthcare analytics dashboard",
     "healthcare analytics India",
@@ -19,6 +19,11 @@ export const metadata = createPageMetadata({
     "hospital data visualization India",
     "patient outcome analytics",
     "healthcare business intelligence",
+    "healthcare analytics Dubai",
+    "healthcare analytics UAE",
+    "healthcare analytics Saudi Arabia",
+    "healthcare analytics Middle East",
+    "healthcare analytics Australia",
   ],
   path: "/demo/healthcare",
 });

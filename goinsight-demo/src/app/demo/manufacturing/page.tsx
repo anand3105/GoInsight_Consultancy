@@ -5,9 +5,9 @@ import ManufacturingContent from "./ManufacturingContent";
 
 export const metadata = createPageMetadata({
   title:
-    "Manufacturing Analytics Solutions India — OEE & Production Dashboard",
+    "Manufacturing Analytics Solutions — OEE & Production Dashboard | India, Dubai, UAE, Australia",
   description:
-    "GoInsight's manufacturing analytics dashboard helps Indian manufacturers track OEE, production efficiency, quality metrics, and equipment performance with Power BI visualizations. Request a free demo.",
+    "GoInsight's manufacturing analytics dashboard helps manufacturers across India, Dubai, UAE, Saudi Arabia & Australia track OEE, production efficiency with Power BI. Request a free demo.",
   keywords: [
     "manufacturing analytics",
     "manufacturing analytics India",
@@ -19,6 +19,11 @@ export const metadata = createPageMetadata({
     "production data visualization India",
     "plant performance analytics",
     "manufacturing business intelligence",
+    "manufacturing analytics Dubai",
+    "manufacturing analytics UAE",
+    "manufacturing analytics Saudi Arabia",
+    "manufacturing analytics Middle East",
+    "manufacturing analytics Australia",
   ],
   path: "/demo/manufacturing",
 });

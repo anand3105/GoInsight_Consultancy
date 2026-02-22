@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import Header from "@/components/Header";
 import TrustedBy from "@/components/TrustedBy";
+import VisionAISection from "@/components/VisionAISection";
 import Footer from "@/components/Footer";
 
 const stats = [
@@ -84,12 +85,12 @@ const expertise = [
 ];
 
 const mncExperience = [
-  { name: "Nokia Networks", logo: "/CompanyIcon/nokia.png" },
-  { name: "Nestlé", logo: "/CompanyIcon/nestle.png" },
-  { name: "HCL Technologies", logo: "/CompanyIcon/hcl.png" },
-  { name: "Carrier", logo: "/CompanyIcon/carrier.png" },
-  { name: "General Motors", logo: "/CompanyIcon/generalmotors.png" },
-  { name: "Amul", logo: "/CompanyIcon/amul.png" },
+  { name: "Nokia Networks", logo: "/CompanyIcon/nokia.png", alt: "Nokia Networks logo - GoInsight team experience" },
+  { name: "Nestlé", logo: "/CompanyIcon/nestle.png", alt: "Nestlé logo - GoInsight team experience" },
+  { name: "HCL Technologies", logo: "/CompanyIcon/hcl.png", alt: "HCL Technologies logo - GoInsight team experience" },
+  { name: "Carrier", logo: "/CompanyIcon/carrier.png", alt: "Carrier logo - GoInsight team experience" },
+  { name: "General Motors", logo: "/CompanyIcon/generalmotors.png", alt: "General Motors logo - GoInsight team experience" },
+  { name: "Amul", logo: "/CompanyIcon/amul.png", alt: "Amul logo - GoInsight team experience" },
 ];
 
 export default function AboutContent() {
@@ -443,7 +444,7 @@ export default function AboutContent() {
               >
                 <Image
                   src={company.logo}
-                  alt={company.name}
+                  alt={company.alt}
                   width={80}
                   height={40}
                   className="h-8 w-auto object-contain brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
@@ -483,6 +484,9 @@ export default function AboutContent() {
           </motion.div>
         </div>
       </section>
+
+      {/* AI Vision & Future Section */}
+      <VisionAISection />
 
       {/* Impact Section */}
       <section className="py-16 md:py-24 bg-brand-background">

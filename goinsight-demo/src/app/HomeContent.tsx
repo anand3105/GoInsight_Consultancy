@@ -9,6 +9,8 @@ import FeaturesSection from "@/components/FeaturesSection";
 import ProcessSection from "@/components/ProcessSection";
 import TechnologiesSection from "@/components/TechnologiesSection";
 import ExperienceSection from "@/components/ExperienceSection";
+import WhyGoInsight from "@/components/WhyGoInsight";
+import FAQSection from "@/components/FAQSection";
 import DemoModal from "@/components/DemoModal";
 import Footer from "@/components/Footer";
 import { AnalyticsDomain } from "@/data/analytics-domains";
@@ -52,16 +54,22 @@ export default function HomeContent() {
       {/* Features Section */}
       <FeaturesSection />
 
-      {/* Process Section */}
-      <ProcessSection />
-
       {/* Technologies Section */}
       <TechnologiesSection />
 
       {/* Experience Section */}
       <ExperienceSection />
 
-      {/* Footer */}
+      {/* Why GoInsight — AI & Vision Section */}
+      <WhyGoInsight />
+
+      {/* How GoInsight's Process Works */}
+      <ProcessSection />
+
+      {/* FAQ Section for SEO */}
+      <FAQSection />
+
+      {/* Footer with CTA */}
       <Footer />
 
       {/* Demo Modal */}
