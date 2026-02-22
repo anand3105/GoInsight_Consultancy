@@ -17,34 +17,15 @@ export default function AnalyticsCity({ onBuildingClick }: AnalyticsCityProps) {
     <section id="services" className="py-10 md:py-16 bg-brand-background relative overflow-hidden">
       {/* City Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Clouds */}
-        <motion.div
-          className="absolute top-10 left-[10%] w-24 h-8 bg-white/60 rounded-full blur-sm"
-          animate={{ x: [0, 50, 0] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute top-20 right-[20%] w-32 h-10 bg-white/50 rounded-full blur-sm"
-          animate={{ x: [0, -30, 0] }}
-          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute top-8 left-[50%] w-20 h-6 bg-white/40 rounded-full blur-sm"
-          animate={{ x: [0, 40, 0] }}
-          transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
-        />
+        {/* Clouds — CSS only, no JS animation */}
+        <div className="absolute top-10 left-[10%] w-24 h-8 bg-white/60 rounded-full blur-sm hidden sm:block" />
+        <div className="absolute top-20 right-[20%] w-32 h-10 bg-white/50 rounded-full blur-sm hidden sm:block" />
+        <div className="absolute top-8 left-[50%] w-20 h-6 bg-white/40 rounded-full blur-sm hidden sm:block" />
 
-        {/* Sun */}
-        <motion.div
+        {/* Sun — static glow, no box-shadow animation */}
+        <div
           className="absolute top-12 right-[5%] sm:right-[10%] w-10 h-10 sm:w-16 sm:h-16 bg-brand-yellow rounded-full"
-          animate={{
-            boxShadow: [
-              "0 0 40px rgba(236, 196, 26, 0.4)",
-              "0 0 60px rgba(236, 196, 26, 0.6)",
-              "0 0 40px rgba(236, 196, 26, 0.4)",
-            ],
-          }}
-          transition={{ duration: 3, repeat: Infinity }}
+          style={{ boxShadow: "0 0 50px rgba(236, 196, 26, 0.5)" }}
         />
 
         {/* Ground */}
@@ -77,16 +58,7 @@ export default function AnalyticsCity({ onBuildingClick }: AnalyticsCityProps) {
           {/* Road Above Row 1 */}
           <div className="w-full h-6 md:h-8 bg-gray-300 relative overflow-hidden">
             <div className="absolute inset-y-0 left-0 right-0 flex items-center justify-center">
-              <div className="w-full h-1 bg-brand-yellow flex">
-                {Array.from({ length: 20 }).map((_, i) => (
-                  <motion.div
-                    key={i}
-                    className="flex-1 mx-1 h-full bg-brand-yellow"
-                    animate={{ opacity: [1, 0.3, 1] }}
-                    transition={{ duration: 1, delay: i * 0.1, repeat: Infinity }}
-                  />
-                ))}
-              </div>
+              <div className="w-full h-1 border-t-4 border-dashed border-brand-yellow" />
             </div>
           </div>
 
@@ -255,11 +227,7 @@ export default function AnalyticsCity({ onBuildingClick }: AnalyticsCityProps) {
             {/* Traffic Light - Left side (hidden on mobile) */}
             <div className="flex-col items-center hidden md:flex">
               <div className="w-4 h-10 bg-gray-800 rounded-sm flex flex-col items-center justify-around py-1">
-                <motion.div
-                  className="w-2.5 h-2.5 rounded-full bg-red-500"
-                  animate={{ opacity: [1, 0.3, 1] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                />
+                <div className="w-2.5 h-2.5 rounded-full bg-red-500" />
                 <div className="w-2.5 h-2.5 rounded-full bg-yellow-900/40" />
                 <div className="w-2.5 h-2.5 rounded-full bg-green-900/40" />
               </div>
@@ -269,16 +237,7 @@ export default function AnalyticsCity({ onBuildingClick }: AnalyticsCityProps) {
             {/* Road */}
             <div className="flex-1 h-10 md:h-12 bg-gray-400 relative overflow-hidden">
               <div className="absolute inset-y-0 left-0 right-0 flex items-center justify-center">
-                <div className="w-full h-2 flex gap-4">
-                  {Array.from({ length: 30 }).map((_, i) => (
-                    <motion.div
-                      key={i}
-                      className="w-8 h-full bg-white"
-                      animate={{ opacity: [0.8, 0.4, 0.8] }}
-                      transition={{ duration: 0.5, delay: i * 0.05, repeat: Infinity }}
-                    />
-                  ))}
-                </div>
+                <div className="w-full h-0 border-t-[6px] border-dashed border-white/70" />
               </div>
               {/* Car 1 - Yellow going right */}
               <motion.div
@@ -327,11 +286,7 @@ export default function AnalyticsCity({ onBuildingClick }: AnalyticsCityProps) {
               <div className="w-4 h-10 bg-gray-800 rounded-sm flex flex-col items-center justify-around py-1">
                 <div className="w-2.5 h-2.5 rounded-full bg-red-900/40" />
                 <div className="w-2.5 h-2.5 rounded-full bg-yellow-900/40" />
-                <motion.div
-                  className="w-2.5 h-2.5 rounded-full bg-green-500"
-                  animate={{ opacity: [1, 0.3, 1] }}
-                  transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-                />
+                <div className="w-2.5 h-2.5 rounded-full bg-green-500" />
               </div>
               <div className="w-1.5 h-6 bg-gray-700" />
             </div>

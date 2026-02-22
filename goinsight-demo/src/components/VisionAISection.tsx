@@ -70,8 +70,8 @@ export default function VisionAISection() {
       {/* AI Capabilities Section */}
       <section className="py-16 md:py-24 bg-brand-primary relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff06_1px,transparent_1px),linear-gradient(to_bottom,#ffffff06_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
-        <div className="absolute top-20 left-0 w-80 h-80 bg-brand-yellow/[0.05] rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 right-10 w-64 h-64 bg-brand-yellow/[0.04] rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-20 left-0 w-80 h-80 bg-brand-yellow/[0.05] rounded-full blur-3xl pointer-events-none hidden md:block" />
+        <div className="absolute bottom-0 right-10 w-64 h-64 bg-brand-yellow/[0.04] rounded-full blur-3xl pointer-events-none hidden md:block" />
 
         <div className="container mx-auto px-4 relative z-10">
           {/* Header */}

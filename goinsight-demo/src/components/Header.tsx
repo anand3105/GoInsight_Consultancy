@@ -35,7 +35,7 @@ export default function Header() {
     <header className="sticky top-0 z-50">
       {/* Announcement Bar - Yellow */}
       <div
-        className={`bg-brand-yellow text-brand-dark px-4 overflow-hidden transition-all duration-300 ease-in-out ${
+        className={`bg-brand-yellow text-brand-dark px-4 overflow-hidden transition-[max-height,padding] duration-300 ease-in-out will-change-transform ${
           isScrolled ? "max-h-0 py-0" : "max-h-12 py-1"
         }`}
       >

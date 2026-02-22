@@ -59,23 +59,13 @@ export default function Building({ domain, onClick, index }: BuildingProps) {
         }}
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
       >
-        {/* Windows Grid */}
+        {/* Windows Grid — static, uses group-hover for glow */}
         <div className="absolute top-4 left-0 right-0 px-3">
           <div className="grid grid-cols-3 gap-2">
             {Array.from({ length: domain.buildingHeight === "tall" ? 9 : domain.buildingHeight === "medium" ? 6 : 3 }).map((_, i) => (
-              <motion.div
+              <div
                 key={i}
-                className="h-4 rounded-sm bg-brand-sky/20"
-                animate={{
-                  backgroundColor: isHovered
-                    ? ["rgba(236, 196, 26, 0.2)", "rgba(236, 196, 26, 0.5)", "rgba(236, 196, 26, 0.2)"]
-                    : "rgba(236, 196, 26, 0.2)",
-                }}
-                transition={{
-                  duration: 1.5,
-                  repeat: isHovered ? Infinity : 0,
-                  delay: i * 0.1,
-                }}
+                className="h-4 rounded-sm bg-brand-sky/20 transition-colors duration-300 group-hover:bg-brand-yellow/40"
               />
             ))}
           </div>

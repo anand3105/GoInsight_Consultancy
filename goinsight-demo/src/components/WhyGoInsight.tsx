@@ -56,7 +56,7 @@ export default function WhyGoInsight() {
     <section className="relative py-12 md:py-16 bg-brand-primary overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff06_1px,transparent_1px),linear-gradient(to_bottom,#ffffff06_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
-      <div className="absolute top-10 right-0 w-72 h-72 bg-brand-yellow/[0.05] rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-10 right-0 w-72 h-72 bg-brand-yellow/[0.05] rounded-full blur-3xl pointer-events-none hidden md:block" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header — compact */}
