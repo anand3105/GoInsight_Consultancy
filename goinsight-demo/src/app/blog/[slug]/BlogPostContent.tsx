@@ -12,6 +12,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const postComponents: Record<string, React.ComponentType> = {
+  "how-to-use-ai-in-data-analytics": dynamic(
+    () => import("./posts/how-to-use-ai-in-data-analytics")
+  ),
   "data-analytics-transforming-business-2026": dynamic(
     () => import("./posts/data-analytics-transforming-business-2026")
   ),
