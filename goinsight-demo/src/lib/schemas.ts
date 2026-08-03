@@ -177,30 +177,57 @@ export function articleSchema({
   url,
   datePublished,
   dateModified,
-  authorName,
+  author,
   imageUrl,
   keywords,
+  section,
+  readTime,
+  about = [],
 }: {
   title: string;
   description: string;
   url: string;
   datePublished: string;
   dateModified: string;
-  authorName: string;
+  author: {
+    name: string;
+    jobTitle?: string;
+    knowsAbout?: string[];
+    url?: string;
+  };
   imageUrl: string;
   keywords: string[];
+  section?: string;
+  /** Reading time in minutes — emitted as ISO-8601 `timeRequired`. */
+  readTime?: number;
+  /** Key topics/entities the article covers — for AI/answer-engine grounding. */
+  about?: string[];
 }) {
   return {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: title,
     description,
     url,
     datePublished,
     dateModified,
+    inLanguage: "en",
+    isAccessibleForFree: true,
+    ...(section ? { articleSection: section } : {}),
+    ...(readTime ? { timeRequired: `PT${readTime}M`, wordCount: readTime * 200 } : {}),
     author: {
       "@type": "Person",
-      name: authorName,
+      name: author.name,
+      ...(author.jobTitle ? { jobTitle: author.jobTitle } : {}),
+      ...(author.knowsAbout && author.knowsAbout.length
+        ? { knowsAbout: author.knowsAbout }
+        : {}),
+      url: author.url || siteConfig.url,
+      worksFor: {
+        "@type": "Organization",
+        name: siteConfig.name,
+        url: siteConfig.url,
+      },
     },
     publisher: {
       "@type": "Organization",
@@ -213,10 +240,52 @@ export function articleSchema({
     },
     image: imageUrl,
     keywords: keywords.join(", "),
+    ...(about.length
+      ? { about: about.map((name) => ({ "@type": "Thing", name })) }
+      : {}),
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": url,
     },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", ".blog-faq"],
+    },
+  };
+}
+
+export function blogSchema(
+  posts: {
+    title: string;
+    excerpt: string;
+    slug: string;
+    publishedAt: string;
+    updatedAt: string;
+    authorName: string;
+  }[]
+) {
+  const url = `${siteConfig.url}/blog`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: `${siteConfig.name} Blog`,
+    description:
+      "Expert insights on data analytics, Power BI, Tableau, AI/ML, and dashboard design.",
+    url,
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    blogPost: posts.map((post) => ({
+      "@type": "BlogPosting",
+      headline: post.title,
+      description: post.excerpt,
+      url: `${siteConfig.url}/blog/${post.slug}`,
+      datePublished: post.publishedAt,
+      dateModified: post.updatedAt,
+      author: { "@type": "Person", name: post.authorName },
+    })),
   };
 }
 

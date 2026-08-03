@@ -27,30 +27,10 @@ export default function EmailGateModal({ onSubmit }: EmailGateModalProps) {
     }
   }, []);
 
-  const validateProfessionalEmail = (email: string): boolean => {
+  const validateEmail = (email: string): boolean => {
+    // Accept any valid email address (Gmail, Outlook, work domains, etc.)
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return false;
-    }
-
-    // Check for common personal email domains
-    const personalDomains = [
-      "gmail.com",
-      "yahoo.com",
-      "hotmail.com",
-      "outlook.com",
-      "aol.com",
-      "icloud.com",
-      "mail.com",
-      "protonmail.com",
-      "zoho.com",
-      "yandex.com",
-      "gmx.com",
-      "live.com",
-    ];
-
-    const domain = email.split("@")[1]?.toLowerCase();
-    return !personalDomains.includes(domain);
+    return emailRegex.test(email);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -62,8 +42,8 @@ export default function EmailGateModal({ onSubmit }: EmailGateModalProps) {
       return;
     }
 
-    if (!validateProfessionalEmail(email)) {
-      setError("Please enter a professional/work email address");
+    if (!validateEmail(email)) {
+      setError("Please enter a valid email address");
       return;
     }
 
@@ -158,7 +138,7 @@ export default function EmailGateModal({ onSubmit }: EmailGateModalProps) {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.5 }}
                 >
-                  Please enter your professional email to continue
+                  Please enter your email to continue
                 </motion.p>
 
                 <form onSubmit={handleSubmit}>
@@ -178,7 +158,7 @@ export default function EmailGateModal({ onSubmit }: EmailGateModalProps) {
                         setEmail(e.target.value);
                         setError("");
                       }}
-                      placeholder="yourname@company.com"
+                      placeholder="yourname@email.com"
                       className={`w-full pl-12 pr-4 py-4 bg-gray-50 border-2 rounded-xl text-brand-dark placeholder:text-gray-400 focus:outline-none focus:border-brand-primary transition-colors ${
                         error ? "border-red-400" : "border-transparent"
                       }`}

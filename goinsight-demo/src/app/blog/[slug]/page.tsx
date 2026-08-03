@@ -2,8 +2,8 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { createPageMetadata } from "@/lib/seo";
 import JsonLd from "@/components/JsonLd";
-import { articleSchema, breadcrumbSchema } from "@/lib/schemas";
-import { blogPosts, getPostBySlug, getAllSlugs } from "@/data/blog-data";
+import { articleSchema, breadcrumbSchema, faqSchema } from "@/lib/schemas";
+import { getPostBySlug, getAllSlugs } from "@/data/blog-data";
 import BlogPostContent from "./BlogPostContent";
 
 export function generateStaticParams() {
@@ -24,6 +24,12 @@ export function generateMetadata({
     keywords: post.keywords,
     path: `/blog/${post.slug}`,
     ogType: "article",
+    image: post.coverImage,
+    publishedTime: post.publishedAt,
+    modifiedTime: post.updatedAt,
+    authors: [post.author.name],
+    section: post.category,
+    tags: post.tags,
   });
 }
 
@@ -45,11 +51,20 @@ export default function BlogPostPage({
           url: `https://goinsight.in/blog/${post.slug}`,
           datePublished: post.publishedAt,
           dateModified: post.updatedAt,
-          authorName: post.author.name,
+          author: {
+            name: post.author.name,
+            jobTitle: post.author.jobTitle,
+            knowsAbout: post.author.knowsAbout,
+            url: post.author.linkedin,
+          },
           imageUrl: `https://goinsight.in${post.coverImage}`,
           keywords: post.keywords,
+          section: post.category,
+          readTime: post.readTime,
+          about: post.about,
         })}
       />
+      {post.faqs.length > 0 && <JsonLd data={faqSchema(post.faqs)} />}
       <JsonLd
         data={breadcrumbSchema([
           { name: "Home", url: "https://goinsight.in" },

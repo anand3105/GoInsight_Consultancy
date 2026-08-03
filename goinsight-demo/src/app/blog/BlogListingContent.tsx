@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { Search } from "lucide-react";
 import { blogPosts, blogCategories, type BlogCategory } from "@/data/blog-data";
 import BlogCard from "@/components/blog/BlogCard";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function BlogListingContent() {
   const [activeCategory, setActiveCategory] = useState<BlogCategory>("All");
@@ -21,7 +23,9 @@ export default function BlogListingContent() {
   });
 
   return (
-    <>
+    <main className="min-h-screen bg-brand-background">
+      <Header />
+
       {/* Hero */}
       <section className="relative bg-brand-primary overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff06_1px,transparent_1px),linear-gradient(to_bottom,#ffffff06_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
@@ -109,6 +113,8 @@ export default function BlogListingContent() {
           )}
         </div>
       </section>
-    </>
+
+      <Footer />
+    </main>
   );
 }

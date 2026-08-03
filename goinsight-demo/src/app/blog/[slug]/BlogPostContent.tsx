@@ -7,6 +7,9 @@ import BlogTableOfContents from "@/components/blog/BlogTableOfContents";
 import BlogAuthorCard from "@/components/blog/BlogAuthorCard";
 import BlogRelatedPosts from "@/components/blog/BlogRelatedPosts";
 import BlogCTA from "@/components/blog/BlogCTA";
+import BlogFAQ from "@/components/blog/BlogFAQ";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const postComponents: Record<string, React.ComponentType> = {
   "data-analytics-transforming-business-2026": dynamic(
@@ -35,7 +38,9 @@ export default function BlogPostContent({ post }: BlogPostContentProps) {
   const relatedPosts = getRelatedPosts(post.slug, 3);
 
   return (
-    <>
+    <main className="min-h-screen bg-brand-background">
+      <Header />
+
       <BlogHero post={post} />
 
       <div className="bg-[#fefaf7]">
@@ -52,6 +57,8 @@ export default function BlogPostContent({ post }: BlogPostContentProps) {
                 {PostArticle ? <PostArticle /> : <p>Article content coming soon.</p>}
               </div>
 
+              {post.faqs.length > 0 && <BlogFAQ faqs={post.faqs} />}
+
               <BlogCTA />
               <BlogAuthorCard author={post.author} />
             </article>
@@ -60,6 +67,8 @@ export default function BlogPostContent({ post }: BlogPostContentProps) {
       </div>
 
       <BlogRelatedPosts posts={relatedPosts} />
-    </>
+
+      <Footer />
+    </main>
   );
 }

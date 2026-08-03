@@ -1,6 +1,7 @@
 import { createPageMetadata } from "@/lib/seo";
 import JsonLd from "@/components/JsonLd";
-import { breadcrumbSchema } from "@/lib/schemas";
+import { breadcrumbSchema, blogSchema } from "@/lib/schemas";
+import { blogPosts } from "@/data/blog-data";
 import BlogListingContent from "./BlogListingContent";
 
 export const metadata = createPageMetadata({
@@ -26,6 +27,18 @@ export default function BlogPage() {
   return (
     <>
       <BlogListingContent />
+      <JsonLd
+        data={blogSchema(
+          blogPosts.map((post) => ({
+            title: post.title,
+            excerpt: post.excerpt,
+            slug: post.slug,
+            publishedAt: post.publishedAt,
+            updatedAt: post.updatedAt,
+            authorName: post.author.name,
+          }))
+        )}
+      />
       <JsonLd
         data={breadcrumbSchema([
           { name: "Home", url: "https://goinsight.in" },

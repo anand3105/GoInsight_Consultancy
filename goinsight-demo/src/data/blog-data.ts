@@ -1,9 +1,18 @@
 export interface BlogAuthor {
   name: string;
   role: string;
+  /** Schema.org jobTitle — used for author E-E-A-T signals (GEO). */
+  jobTitle: string;
+  /** Topics the author is an authority on — feeds schema `knowsAbout` (GEO). */
+  knowsAbout: string[];
   avatar: string;
   bio: string;
   linkedin?: string;
+}
+
+export interface BlogFAQ {
+  question: string;
+  answer: string;
 }
 
 export interface BlogPost {
@@ -19,12 +28,25 @@ export interface BlogPost {
   coverImage: string;
   keywords: string[];
   tableOfContents: { id: string; title: string }[];
+  /** Answer-engine-optimized Q&A. Rendered on-page + emitted as FAQPage schema. */
+  faqs: BlogFAQ[];
+  /** Key entities the article covers — feeds schema `about`/`mentions` (GEO). */
+  about?: string[];
 }
 
 export const blogAuthors: Record<string, BlogAuthor> = {
   anand: {
     name: "Anand Gupta",
     role: "Founder & Analytics Lead",
+    jobTitle: "Founder & Analytics Lead",
+    knowsAbout: [
+      "Data Analytics",
+      "Business Intelligence",
+      "Power BI",
+      "Machine Learning",
+      "Data Visualization",
+      "AI Consulting",
+    ],
     avatar: "/Go-Insight-Color_ICON.png",
     bio: "Anand Gupta is the founder of GoInsight, with 8+ years of experience in data analytics, business intelligence, and AI/ML consulting. He has led 100+ analytics projects across India, UAE, and Australia.",
     linkedin: "https://www.linkedin.com/company/goinsight/",
@@ -32,6 +54,15 @@ export const blogAuthors: Record<string, BlogAuthor> = {
   team: {
     name: "GoInsight Team",
     role: "Analytics & BI Experts",
+    jobTitle: "Analytics & BI Consultants",
+    knowsAbout: [
+      "Power BI",
+      "Tableau",
+      "Python",
+      "Machine Learning",
+      "Data Warehousing",
+      "Dashboard Design",
+    ],
     avatar: "/Go-Insight-Color_ICON.png",
     bio: "The GoInsight team comprises 40+ analytics professionals specializing in Power BI, Tableau, Python, AI/ML, and data visualization across 10+ industries globally.",
     linkedin: "https://www.linkedin.com/company/goinsight/",
@@ -83,6 +114,34 @@ export const blogPosts: BlogPost[] = [
       { id: "roi-of-analytics", title: "The ROI of Analytics" },
       { id: "conclusion", title: "Conclusion" },
     ],
+    about: [
+      "Data Analytics",
+      "Business Intelligence",
+      "Predictive Analytics",
+      "Data-Driven Decision Making",
+    ],
+    faqs: [
+      {
+        question: "How is data analytics transforming business decision-making in 2026?",
+        answer:
+          "In 2026, businesses use real-time dashboards, AI-driven predictive models, and self-service BI to make faster, evidence-based decisions. Analytics has shifted from retrospective reporting to real-time and predictive insight, cutting decision cycles from weeks to minutes.",
+      },
+      {
+        question: "What are the biggest data analytics trends in 2026?",
+        answer:
+          "The top trends are AI-augmented analytics, real-time streaming dashboards, self-service business intelligence, data democratization, and embedded analytics built directly into operational applications.",
+      },
+      {
+        question: "What ROI can businesses expect from data analytics?",
+        answer:
+          "Organizations that adopt modern analytics typically see 25–40% gains in operational efficiency, 15–30% cost reductions through data-driven optimization, and 3–5x faster reporting cycles.",
+      },
+      {
+        question: "How do I build a data-driven culture?",
+        answer:
+          "Start with executive sponsorship, define clear KPIs, invest in self-service BI tools, train teams in data literacy, and make dashboards part of everyday workflows rather than monthly reviews.",
+      },
+    ],
   },
   {
     slug: "power-bi-vs-tableau",
@@ -120,6 +179,34 @@ export const blogPosts: BlogPost[] = [
       { id: "performance", title: "Performance & Scalability" },
       { id: "verdict", title: "The Verdict: Which Should You Choose?" },
     ],
+    about: [
+      "Power BI",
+      "Tableau",
+      "Business Intelligence Tools",
+      "Data Visualization",
+    ],
+    faqs: [
+      {
+        question: "Is Power BI or Tableau better for my business?",
+        answer:
+          "Power BI is best for Microsoft-centric and cost-sensitive teams, starting around $10 per user per month, while Tableau excels at advanced visualization and large enterprise deployments. For most small and mid-market companies, Power BI offers the best value for money.",
+      },
+      {
+        question: "How much do Power BI and Tableau cost?",
+        answer:
+          "Power BI Pro is about $10 per user/month and Premium around $20 per user/month. Tableau Creator is roughly $75 per user/month, Explorer $42, and Viewer $15. Power BI is significantly cheaper for most teams.",
+      },
+      {
+        question: "Which is easier to learn, Power BI or Tableau?",
+        answer:
+          "Power BI has a gentler learning curve for anyone familiar with Excel and Microsoft tools. Tableau's drag-and-drop interface is intuitive for visualization but takes longer to master advanced calculations.",
+      },
+      {
+        question: "Can Power BI and Tableau connect to the same data sources?",
+        answer:
+          "Yes. Both connect to hundreds of sources including SQL Server, Snowflake, Google BigQuery, Excel, and cloud APIs. Tableau has slightly broader native connectors, while Power BI integrates most deeply with the Microsoft and Azure ecosystem.",
+      },
+    ],
   },
   {
     slug: "ai-powered-analytics-machine-learning-bi",
@@ -154,6 +241,34 @@ export const blogPosts: BlogPost[] = [
       { id: "challenges", title: "Challenges & How to Overcome Them" },
       { id: "future-outlook", title: "Future Outlook" },
     ],
+    about: [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Predictive Analytics",
+      "Business Intelligence",
+    ],
+    faqs: [
+      {
+        question: "How is AI changing business intelligence?",
+        answer:
+          "AI adds automated anomaly detection, natural-language querying, predictive forecasting, and auto-generated insights to BI, letting users get answers without manually building reports or writing queries.",
+      },
+      {
+        question: "What are practical uses of machine learning in analytics?",
+        answer:
+          "Common production uses include demand forecasting, customer churn prediction, anomaly and fraud detection, sentiment analysis, and automated customer segmentation.",
+      },
+      {
+        question: "Do I need a data scientist to use AI-powered analytics?",
+        answer:
+          "Not always. Modern platforms like Power BI, Tableau, and Azure ML offer built-in AutoML and no-code AI features. Custom or high-stakes models still benefit from dedicated data science expertise.",
+      },
+      {
+        question: "What tools are used for AI-powered analytics?",
+        answer:
+          "Popular tools include Power BI paired with Azure ML, Python libraries such as scikit-learn and TensorFlow, Databricks, and Tableau with its built-in AI capabilities.",
+      },
+    ],
   },
   {
     slug: "data-analytics-consulting-dubai-middle-east",
@@ -187,6 +302,34 @@ export const blogPosts: BlogPost[] = [
       { id: "choosing-partner", title: "Choosing the Right Analytics Partner" },
       { id: "goinsight-in-mena", title: "GoInsight in the MENA Region" },
       { id: "getting-started", title: "Getting Started" },
+    ],
+    about: [
+      "Data Analytics Consulting",
+      "Dubai",
+      "Middle East",
+      "Saudi Vision 2030",
+    ],
+    faqs: [
+      {
+        question: "Why is data analytics demand growing in Dubai and the Middle East?",
+        answer:
+          "Government programs like UAE's national strategies and Saudi Vision 2030, rapid digital transformation, and heavy smart-city investment are driving strong demand for analytics across the MENA region.",
+      },
+      {
+        question: "How do I choose a data analytics consulting partner in the UAE?",
+        answer:
+          "Evaluate regional experience, industry expertise, technology stack (Power BI, Tableau, AI/ML), data-security compliance, and proven ROI case studies. Prefer partners who can deliver both on-site and remotely.",
+      },
+      {
+        question: "Which industries drive analytics demand in the MENA region?",
+        answer:
+          "Banking and finance, retail and e-commerce, real estate, healthcare, government, and logistics are the biggest adopters of data analytics across the Middle East.",
+      },
+      {
+        question: "Does GoInsight provide analytics consulting in Saudi Arabia and Dubai?",
+        answer:
+          "Yes. GoInsight serves clients across the UAE (Dubai, Abu Dhabi), Saudi Arabia (Riyadh, Jeddah), Qatar, Bahrain, Kuwait, and Oman, delivering both remotely and on-site.",
+      },
     ],
   },
   {
@@ -228,6 +371,34 @@ export const blogPosts: BlogPost[] = [
       { id: "product-analytics-dashboard", title: "9. Product Analytics Dashboard" },
       { id: "real-time-monitoring-dashboard", title: "10. Real-Time Monitoring Dashboard" },
       { id: "design-best-practices", title: "Design Best Practices" },
+    ],
+    about: [
+      "KPI Dashboards",
+      "Dashboard Design",
+      "Data Visualization",
+      "Business Metrics",
+    ],
+    faqs: [
+      {
+        question: "What are the most important KPI dashboards for a business?",
+        answer:
+          "The essential dashboards are executive summary, sales performance, marketing analytics, financial KPI, operations, customer analytics, HR and workforce, supply chain, product analytics, and real-time monitoring.",
+      },
+      {
+        question: "What makes a good KPI dashboard?",
+        answer:
+          "A good dashboard focuses on a few actionable KPIs, uses clear visual hierarchy, updates in real or near-real time, supports drill-down, and is designed around the specific decisions its audience needs to make.",
+      },
+      {
+        question: "How many KPIs should a dashboard show?",
+        answer:
+          "Best practice is 5–9 KPIs per dashboard. Too many metrics dilute focus — group related metrics and build separate dashboards for different audiences.",
+      },
+      {
+        question: "Which tools are best for building KPI dashboards?",
+        answer:
+          "Power BI and Tableau are the leading enterprise tools, while custom React and Next.js dashboards are ideal when you need to embed analytics directly into a product.",
+      },
     ],
   },
 ];

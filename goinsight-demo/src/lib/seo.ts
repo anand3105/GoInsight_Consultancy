@@ -72,12 +72,26 @@ export function createPageMetadata({
   keywords = [],
   path = "",
   ogType = "website" as const,
+  image = "/og-image.png",
+  publishedTime,
+  modifiedTime,
+  authors,
+  section,
+  tags,
 }: {
   title: string;
   description: string;
   keywords?: string[];
   path?: string;
   ogType?: "website" | "article";
+  /** OG/Twitter share image (e.g. a post cover). Defaults to the site OG image. */
+  image?: string;
+  /** ISO date — emitted as `article:published_time` when ogType is "article". */
+  publishedTime?: string;
+  modifiedTime?: string;
+  authors?: string[];
+  section?: string;
+  tags?: string[];
 }): Metadata {
   const url = `${siteConfig.url}${path}`;
   const allKeywords = Array.from(new Set([...baseKeywords, ...keywords]));
@@ -96,15 +110,24 @@ export function createPageMetadata({
       siteName: siteConfig.name,
       images: [
         {
-          url: "/og-image.png",
+          url: image,
           width: 1200,
           height: 630,
-          alt: `${siteConfig.name} — Data Analytics Consulting India, Dubai, UAE, Australia`,
+          alt: title,
         },
       ],
       locale: "en_IN",
       alternateLocale: ["en_AE", "en_AU", "en_SA"],
       type: ogType,
+      ...(ogType === "article"
+        ? {
+            publishedTime,
+            modifiedTime,
+            authors,
+            section,
+            tags,
+          }
+        : {}),
     },
     twitter: {
       card: "summary_large_image",
@@ -112,6 +135,7 @@ export function createPageMetadata({
       description,
       site: "@goinsight_",
       creator: "@goinsight_",
+      images: [image],
     },
     robots: {
       index: true,

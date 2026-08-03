@@ -1,8 +1,16 @@
 import type { MetadataRoute } from "next";
+import { blogPosts } from "@/data/blog-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://goinsight.in";
   const today = new Date().toISOString().split("T")[0];
+
+  const blogPostEntries: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: post.updatedAt,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
 
   return [
     {
@@ -91,36 +99,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.8,
     },
-    {
-      url: `${baseUrl}/blog/data-analytics-transforming-business-2026`,
-      lastModified: today,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/power-bi-vs-tableau`,
-      lastModified: today,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/ai-powered-analytics-machine-learning-bi`,
-      lastModified: today,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/data-analytics-consulting-dubai-middle-east`,
-      lastModified: today,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/top-10-kpi-dashboards-2026`,
-      lastModified: today,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
+    // Blog posts — derived from blog-data so the sitemap never drifts
+    ...blogPostEntries,
     // Legal pages
     {
       url: `${baseUrl}/privacy`,
