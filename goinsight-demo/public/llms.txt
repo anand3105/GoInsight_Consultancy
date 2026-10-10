@@ -54,6 +54,21 @@ Explore live analytics dashboards for each industry:
 - About Us: https://goinsight.in/about
 - Contact / Book Consultation: https://goinsight.in/contact
 - Careers: https://goinsight.in/careers
+- Blog: https://goinsight.in/blog
+- ROI Analytics: https://goinsight.in/roi-analytics
+
+## Blog & Guides
+
+- How to Use AI in Data Analytics (2026 guide): https://goinsight.in/blog/how-to-use-ai-in-data-analytics
+- Power BI Consulting Services: Costs, Process & Choosing a Partner: https://goinsight.in/blog/power-bi-consulting-services-guide
+- Microsoft Fabric vs Power BI: https://goinsight.in/blog/microsoft-fabric-vs-power-bi
+- Data Analytics for Small Businesses: https://goinsight.in/blog/data-analytics-for-small-business
+- How to Build a Data Strategy (7-step framework): https://goinsight.in/blog/how-to-build-a-data-strategy
+- How Data Analytics is Transforming Business Decision-Making in 2026: https://goinsight.in/blog/data-analytics-transforming-business-2026
+- Power BI vs Tableau: https://goinsight.in/blog/power-bi-vs-tableau
+- AI-Powered Analytics, Machine Learning & BI: https://goinsight.in/blog/ai-powered-analytics-machine-learning-bi
+- Data Analytics Consulting in Dubai & the Middle East: https://goinsight.in/blog/data-analytics-consulting-dubai-middle-east
+- Top 10 KPI Dashboards for 2026: https://goinsight.in/blog/top-10-kpi-dashboards-2026
 
 ## Why Choose GoInsight
 

@@ -12,6 +12,18 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const postComponents: Record<string, React.ComponentType> = {
+  "power-bi-consulting-services-guide": dynamic(
+    () => import("./posts/power-bi-consulting-services-guide")
+  ),
+  "microsoft-fabric-vs-power-bi": dynamic(
+    () => import("./posts/microsoft-fabric-vs-power-bi")
+  ),
+  "how-to-build-a-data-strategy": dynamic(
+    () => import("./posts/how-to-build-a-data-strategy")
+  ),
+  "data-analytics-for-small-business": dynamic(
+    () => import("./posts/data-analytics-for-small-business")
+  ),
   "how-to-use-ai-in-data-analytics": dynamic(
     () => import("./posts/how-to-use-ai-in-data-analytics")
   ),
