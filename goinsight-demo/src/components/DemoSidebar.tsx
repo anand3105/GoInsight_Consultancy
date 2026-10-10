@@ -174,7 +174,7 @@ export default function DemoSidebar({ activeDomain, activeSection = "overview", 
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
-              <h1 className={`font-bold text-sm ${isDark ? "text-white" : "text-brand-dark"}`}>GoInsight</h1>
+              <p className={`font-bold text-sm ${isDark ? "text-white" : "text-brand-dark"}`}>GoInsight</p>
               <p className={`text-xs ${isDark ? "text-gray-400" : "text-brand-secondary"}`}>{currentDomain?.name} Analytics</p>
             </motion.div>
           )}

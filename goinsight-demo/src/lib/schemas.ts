@@ -4,9 +4,34 @@ export function organizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `${siteConfig.url}/#organization`,
     name: siteConfig.name,
     url: siteConfig.url,
+    description: siteConfig.description,
+    email: siteConfig.email,
+    telephone: siteConfig.phone,
     logo: `${siteConfig.url}/Go-Insight-Color_ICON.png`,
+    image: `${siteConfig.url}/og-image.png`,
+    knowsAbout: [
+      "Data Analytics",
+      "Business Intelligence",
+      "Microsoft Power BI",
+      "Microsoft Fabric",
+      "Tableau",
+      "Data Visualization",
+      "Machine Learning",
+      "Predictive Analytics",
+      "Data Warehousing",
+      "ETL",
+      "Data Strategy",
+    ],
+    areaServed: [
+      { "@type": "Country", name: "India" },
+      { "@type": "Country", name: "United Arab Emirates" },
+      { "@type": "Country", name: "Saudi Arabia" },
+      { "@type": "Country", name: "Australia" },
+      { "@type": "Place", name: "Middle East" },
+    ],
     founder: {
       "@type": "Person",
       name: siteConfig.founder,
@@ -35,8 +60,12 @@ export function websiteSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${siteConfig.url}/#website`,
     name: siteConfig.name,
     url: siteConfig.url,
+    description: siteConfig.description,
+    inLanguage: "en",
+    publisher: { "@id": `${siteConfig.url}/#organization` },
   };
 }
 

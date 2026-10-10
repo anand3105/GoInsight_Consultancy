@@ -15,6 +15,9 @@
 
 ## Core Services
 
+GoInsight is a data analytics and business intelligence consultancy. It designs, builds and supports analytics solutions end to end, from data strategy to production dashboards and machine learning models.
+
+
 - Analytics Consulting & Strategy
 - Power BI Dashboard Development
 - Custom Dashboard Solutions
@@ -79,6 +82,36 @@ Explore live analytics dashboards for each industry:
 - 15+ years combined experience
 - End-to-end analytics solutions from strategy to implementation
 - Free initial consultation available
+
+## Frequently Asked Questions
+
+### What data analytics consulting services does GoInsight offer?
+
+GoInsight offers end-to-end analytics consulting including Power BI dashboard development, custom React & Next.js dashboards that embed directly into your platform, AI/ML-powered predictive analytics, data visualization, data warehousing, and BI strategy. We build both standalone analytics portals and embeddable dashboard components tailored to your product. Serving 10+ industries across India, Dubai, UAE, Saudi Arabia, MENA, and Australia.
+
+### Does GoInsight build AI models for predictive analytics?
+
+Yes. GoInsight builds custom AI and machine learning models for demand forecasting, customer churn prediction, anomaly detection, sentiment analysis, and more. We use Python, scikit-learn, TensorFlow, and Azure ML to deliver production-ready predictive models that integrate directly into your Power BI or Tableau dashboards for real-time decision-making.
+
+### What ROI can I expect from GoInsight's analytics solutions?
+
+Our clients typically see 25–40% improvement in operational efficiency, 15–30% reduction in costs through data-driven optimization, and 3–5x faster reporting cycles. We also offer a dedicated ROI analytics report that quantifies the exact business impact of your analytics investment before you commit.
+
+### Which industries does GoInsight serve?
+
+We serve 10+ industries: Retail (sales & inventory analytics), Finance (financial KPI dashboards), Healthcare (patient & operational analytics), Education (student performance), Manufacturing (OEE & production), Supply Chain (logistics optimization), Sales & Marketing (campaign ROI), and Real Estate (market analytics).
+
+### What tools and technologies does GoInsight use?
+
+We specialize in React, Next.js, and Tailwind CSS for building custom embeddable dashboards, alongside Microsoft Power BI and Tableau for enterprise BI. Our tech stack also includes Python, SQL, Azure, AWS, D3.js, Recharts, scikit-learn, and TensorFlow. Whether you need a Power BI report or a fully custom analytics UI embedded in your SaaS product, we deliver both.
+
+### How much does it cost to hire GoInsight as your analytics partner?
+
+GoInsight offers flexible engagement models — from project-based consulting starting at competitive rates to dedicated analyst hiring and retainer plans. Pricing depends on scope, complexity, and duration. Contact us for a free consultation and custom quote.
+
+### Does GoInsight serve clients in Dubai, UAE, Saudi Arabia, and Australia?
+
+Yes. GoInsight serves clients across India (Delhi, Mumbai, Bangalore, Hyderabad, Chennai, Pune), UAE (Dubai, Abu Dhabi, Sharjah), Saudi Arabia (Riyadh, Jeddah), Qatar, Bahrain, Kuwait, Oman across the MENA region, and Australia (Sydney, Melbourne, Brisbane). We deliver both remotely and on-site.
 
 ## Social Media
 
