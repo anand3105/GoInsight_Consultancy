@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const CONTACT_EMAIL = "hello@goinsight.in";
+const CONTACT_EMAIL = process.env.CONTACT_EMAIL || "gupta.anand3105@gmail.com";
 
 export async function POST(request: Request) {
   try {
