@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import JsonLd from "@/components/JsonLd";
 import { organizationSchema, websiteSchema } from "@/lib/schemas";
@@ -135,6 +136,7 @@ export default function RootLayout({
         {children}
         <JsonLd data={organizationSchema()} />
         <JsonLd data={websiteSchema()} />
+        <Analytics />
       </body>
     </html>
   );
