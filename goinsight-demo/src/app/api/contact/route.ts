@@ -1,6 +1,10 @@
 import { NextResponse } from "next/server";
 
-const CONTACT_EMAIL = process.env.CONTACT_EMAIL || "gupta.anand3105@gmail.com";
+// Trim env values: Vercel values pasted with a trailing newline break the
+// Authorization header and the From address.
+const CONTACT_EMAIL = process.env.CONTACT_EMAIL?.trim() || "gupta.anand3105@gmail.com";
+const RESEND_API_KEY = process.env.RESEND_API_KEY?.trim();
+const RESEND_FROM_EMAIL = process.env.RESEND_FROM_EMAIL?.trim();
 
 export async function POST(request: Request) {
   try {
@@ -50,15 +54,15 @@ export async function POST(request: Request) {
     // You can replace this with Resend, SendGrid, Nodemailer, etc.
 
     // If RESEND_API_KEY is configured, use Resend
-    if (process.env.RESEND_API_KEY) {
+    if (RESEND_API_KEY) {
       const res = await fetch("https://api.resend.com/emails", {
         method: "POST",
         headers: {
-          Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+          Authorization: `Bearer ${RESEND_API_KEY}`,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          from: process.env.RESEND_FROM_EMAIL || "GoInsight <onboarding@resend.dev>",
+          from: RESEND_FROM_EMAIL || "GoInsight <onboarding@resend.dev>",
           to: [CONTACT_EMAIL],
           reply_to: email,
           subject: `New Enquiry from ${name}${company ? ` - ${company}` : ""}`,
@@ -76,6 +80,17 @@ export async function POST(request: Request) {
       }
 
       return NextResponse.json({ success: true });
+    }
+
+    // Without an API key nothing is emailed. In production, report the
+    // failure so the visitor is told to email directly instead of the lead
+    // being silently lost.
+    if (process.env.NODE_ENV === "production") {
+      console.error("RESEND_API_KEY is not set; contact enquiry was not emailed.");
+      return NextResponse.json(
+        { error: "Email is not configured. Please email hello@goinsight.in directly." },
+        { status: 500 }
+      );
     }
 
     // Fallback: log the enquiry (useful during development)
