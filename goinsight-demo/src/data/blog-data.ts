@@ -82,6 +82,320 @@ export type BlogCategory = (typeof blogCategories)[number];
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "data-analytics-consulting-india",
+    title: "Data Analytics Consulting in India: Services, Costs & How to Choose a Firm (2026)",
+    excerpt:
+      "A practical guide to data analytics consulting in India: services, engagement models, indicative INR costs, DPDP Act compliance, and a checklist for choosing the right firm.",
+    category: "Regional Insights",
+    tags: [
+      "data analytics consulting",
+      "India",
+      "Power BI consulting",
+      "analytics outsourcing",
+      "2026",
+    ],
+    author: blogAuthors.anand,
+    publishedAt: "2026-10-13",
+    updatedAt: "2026-10-13",
+    readTime: 11,
+    coverImage: "/og-image.png",
+    keywords: [
+      "data analytics consulting India",
+      "data analytics company India",
+      "Power BI consultant India",
+      "analytics outsourcing India",
+      "BI consulting Delhi",
+      "BI consulting Bangalore",
+      "BI consulting Mumbai",
+      "analytics consulting cost India",
+      "data analytics services India",
+      "hire Power BI developer India",
+      "DPDP Act analytics",
+      "analytics consulting for SMEs India",
+    ],
+    tableOfContents: [
+      { id: "what-is-analytics-consulting", title: "What Does an Analytics Consulting Firm Do?" },
+      { id: "why-india", title: "Why Choose a Consultant in India?" },
+      { id: "engagement-models", title: "Which Engagement Model to Choose" },
+      { id: "costs", title: "How Much Does It Cost in India?" },
+      { id: "how-to-choose", title: "How to Choose the Right Firm" },
+      { id: "process", title: "What a Typical Project Looks Like" },
+      { id: "in-house-vs-consultant", title: "In-House Team or Consultant?" },
+      { id: "smes", title: "Is It Worth It for SMEs and MSMEs?" },
+      { id: "compliance", title: "Compliance Rules in India" },
+      { id: "getting-started", title: "Getting Started with GoInsight" },
+    ],
+    about: [
+      "Data Analytics",
+      "Business Intelligence",
+      "Microsoft Power BI",
+      "India",
+      "Digital Personal Data Protection Act 2023",
+    ],
+    faqs: [
+      {
+        question: "How much does data analytics consulting cost in India?",
+        answer:
+          "Indicatively, a starter dashboard project for an SME ranges from about ₹75,000 to ₹3,00,000, a department BI rollout from ₹3,00,000 to ₹12,00,000, and a data warehouse with BI from ₹10,00,000 upward. Senior consultants typically charge ₹1,500 to ₹5,000 per hour. Software licences such as Power BI Pro are extra.",
+      },
+      {
+        question: "What services do data analytics consulting firms in India offer?",
+        answer:
+          "They usually offer analytics strategy and KPI design, Power BI or Tableau dashboard development, data engineering and warehousing, predictive analytics and machine learning, embedded dashboards for software products, and training for in-house teams. Strong firms also provide documentation, governance and ongoing support after launch.",
+      },
+      {
+        question: "Why do companies in the UAE and Australia outsource analytics to India?",
+        answer:
+          "India offers a large pool of skilled data professionals at competitive rates. India Standard Time overlaps a full working day with the UAE and much of the Australian business day, so collaboration feels close to local. Indian firms also have experience delivering to international clients across many industries.",
+      },
+      {
+        question: "How do I choose a data analytics company in India?",
+        answer:
+          "Ask for live dashboards from similar businesses, check that the firm asks about your decisions and KPIs, confirm data engineering skills, and meet the named team. Insist on DPDP Act-compliant data handling, full ownership of reports and documentation, milestone-based payments and GST-compliant invoices.",
+      },
+      {
+        question: "Does the DPDP Act affect analytics projects in India?",
+        answer:
+          "Yes. The Digital Personal Data Protection Act, 2023 governs how personal data is collected, processed and stored. Analytics projects should use only the personal data a report needs, mask or aggregate it where possible, restrict access with row-level security, and agree in writing how the consultant stores and deletes data.",
+      },
+    ],
+  },
+  {
+    slug: "predictive-analytics-in-retail",
+    title: "Predictive Analytics in Retail: 7 Use Cases, Models & How to Get Started (2026)",
+    excerpt:
+      "Predictive analytics in retail explained: 7 use cases from demand forecasting to CLV, the models and data behind each, regional seasonality, and a step-by-step plan to start.",
+    category: "AI & ML",
+    tags: [
+      "predictive analytics",
+      "retail analytics",
+      "demand forecasting",
+      "machine learning",
+      "2026",
+    ],
+    author: blogAuthors.anand,
+    publishedAt: "2026-10-13",
+    updatedAt: "2026-10-13",
+    readTime: 11,
+    coverImage: "/og-image.png",
+    keywords: [
+      "predictive analytics in retail",
+      "retail demand forecasting",
+      "retail analytics use cases",
+      "inventory optimization machine learning",
+      "customer lifetime value prediction",
+      "markdown optimization",
+      "retail churn prediction",
+      "market basket analysis",
+      "retail forecasting India",
+      "retail analytics Dubai",
+      "retail analytics Australia",
+      "machine learning retail",
+    ],
+    tableOfContents: [
+      { id: "what-is-predictive-retail", title: "What Is Predictive Analytics in Retail?" },
+      { id: "use-cases", title: "Top 7 Use Cases" },
+      { id: "models-data", title: "Models & Data for Each Use Case" },
+      { id: "example", title: "Demand Forecast Code Example" },
+      { id: "seasonality", title: "Regional Seasonality" },
+      { id: "getting-started-steps", title: "How to Get Started" },
+      { id: "pitfalls", title: "Mistakes to Avoid" },
+      { id: "getting-started", title: "Getting Started With GoInsight" },
+    ],
+    about: [
+      "Predictive Analytics",
+      "Retail",
+      "Demand Forecasting",
+      "Machine Learning",
+      "Customer Lifetime Value",
+      "Inventory Management",
+    ],
+    faqs: [
+      {
+        question: "What is predictive analytics in retail?",
+        answer:
+          "Predictive analytics in retail uses historical sales, customer, and inventory data with machine learning to forecast future demand, customer behaviour, and price response. Retailers use these forecasts to stock the right products, target retention offers, time markdowns, and set store targets before issues appear in the results.",
+      },
+      {
+        question: "What data do I need for retail demand forecasting?",
+        answer:
+          "Start with two to three years of sales by product and store, plus prices, promotion dates, and a holiday and festival calendar. Stock-on-hand data helps flag stockouts, so the model does not mistake lost sales for low demand. Weather, footfall, and local events can be added later to improve accuracy.",
+      },
+      {
+        question: "Which machine learning models are used in retail analytics?",
+        answer:
+          "Gradient boosting models such as LightGBM and XGBoost are the most common for demand forecasting and churn. Prophet suits simpler time series. Customer lifetime value often uses RFM segmentation with BG/NBD and Gamma-Gamma models, while basket analysis uses association rules or collaborative filtering for recommendations.",
+      },
+      {
+        question: "How long does it take to implement predictive analytics in retail?",
+        answer:
+          "A focused first use case, such as demand forecasting for one category, typically reaches a usable proof of value in eight to twelve weeks once data access is in place. Most of that time goes into cleaning and joining sales, product, and promotion data rather than building the model itself.",
+      },
+      {
+        question: "How should forecasts handle Diwali, Ramadan, or Black Friday?",
+        answer:
+          "Model each festival or sale event as its own feature, including the weeks before and after it, rather than relying on fixed week numbers. This matters most for Ramadan and Eid, which move about 11 days earlier each year, and for Diwali, whose date also changes from year to year.",
+      },
+    ],
+  },
+  {
+    slug: "power-bi-dashboard-design-best-practices",
+    title: "Power BI Dashboard Design Best Practices: 15 Rules for Reports People Actually Use",
+    excerpt:
+      "15 Power BI dashboard design best practices for layout, visuals, star schema modelling, DAX, performance, accessibility and governance, with a do vs don't checklist.",
+    category: "Dashboard Design",
+    tags: [
+      "Power BI",
+      "dashboard design",
+      "report design",
+      "DAX",
+      "data modelling",
+      "best practices",
+    ],
+    author: blogAuthors.anand,
+    publishedAt: "2026-10-13",
+    updatedAt: "2026-10-13",
+    readTime: 11,
+    coverImage: "/og-image.png",
+    keywords: [
+      "Power BI dashboard design best practices",
+      "Power BI report design",
+      "Power BI dashboard design",
+      "Power BI performance optimization",
+      "star schema Power BI",
+      "DAX best practices",
+      "Power BI accessibility",
+      "Power BI theme JSON",
+      "Power BI Performance Analyzer",
+      "measures vs calculated columns",
+      "Power BI row-level security",
+      "Power BI dashboard India",
+      "Power BI dashboard Dubai",
+    ],
+    tableOfContents: [
+      { id: "why-design-matters", title: "Why Does Power BI Dashboard Design Matter?" },
+      { id: "plan", title: "Plan Before You Build (Rules 1–4)" },
+      { id: "layout-visuals", title: "Layout & Visuals (Rules 5–9)" },
+      { id: "data-model-performance", title: "Data Model & Performance (Rules 10–13)" },
+      { id: "accessibility-governance", title: "Accessibility & Governance (Rules 14–15)" },
+      { id: "do-dont", title: "Do's and Don'ts: Quick Reference" },
+      { id: "getting-started", title: "Getting Started" },
+    ],
+    about: [
+      "Microsoft Power BI",
+      "Dashboard Design",
+      "Data Visualization",
+      "DAX",
+      "Star Schema",
+      "Data Modeling",
+    ],
+    faqs: [
+      {
+        question: "What are the most important Power BI dashboard design best practices?",
+        answer:
+          "Build each page around one business decision and audience, limit it to five to seven headline KPIs, place the most important numbers top-left, and use simple visuals such as line, bar and card charts. Back the report with a star schema data model and measures, and check speed with Performance Analyzer before publishing.",
+      },
+      {
+        question: "How many visuals should a Power BI report page have?",
+        answer:
+          "There is no fixed limit, but fewer is better. Each visual adds clutter and sends its own queries, which slows the page. Keep the overview focused on the visuals that answer its main question, and move secondary detail to drillthrough pages, report page tooltips, or bookmarks so the page stays readable and fast.",
+      },
+      {
+        question: "Why should I use a star schema in Power BI?",
+        answer:
+          "A star schema separates fact tables, such as sales transactions, from dimension tables, such as date, product and customer. This keeps relationships simple and one-directional, makes DAX easier to write, gives predictable filtering, and lets the Power BI engine compress and query data efficiently. It is the modelling approach Microsoft recommends for Power BI.",
+      },
+      {
+        question: "Should I use measures or calculated columns in Power BI?",
+        answer:
+          "Use measures for anything aggregated, such as totals, ratios and growth rates, because they are calculated at query time and respond to filters without increasing model size. Use calculated columns only when you need a value to slice, filter or group by, and consider creating those columns in Power Query or the source database instead.",
+      },
+      {
+        question: "How do I make a Power BI report accessible?",
+        answer:
+          "Add alt text to every visual, set a logical tab order in the Selection pane, and use colours with strong contrast. Never rely on colour alone to show meaning, so pair red and green with icons or labels. Use readable font sizes and consistent layouts, and test the report with keyboard navigation before publishing.",
+      },
+    ],
+  },
+  {
+    slug: "data-analytics-consulting-australia",
+    title: "Data Analytics Consulting in Australia: A Buyer's Guide for 2026",
+    excerpt:
+      "How Australian businesses choose a data analytics consultant in 2026: local vs offshore vs hybrid models, indicative AUD costs, Privacy Act compliance, and the questions to ask.",
+    category: "Regional Insights",
+    tags: [
+      "data analytics consulting",
+      "Australia",
+      "Power BI",
+      "offshore analytics",
+      "buyer's guide",
+    ],
+    author: blogAuthors.anand,
+    publishedAt: "2026-10-13",
+    updatedAt: "2026-10-13",
+    readTime: 10,
+    coverImage: "/og-image.png",
+    keywords: [
+      "data analytics consulting Australia",
+      "Power BI consultant Sydney",
+      "Power BI consulting Melbourne",
+      "BI consulting Australia",
+      "offshore analytics team Australia",
+      "data analytics company Brisbane",
+      "data analytics consultant Perth",
+      "business intelligence consulting Australia",
+      "analytics consulting cost Australia",
+      "Privacy Act analytics compliance",
+      "Azure Australia data residency",
+      "hybrid onshore offshore analytics",
+    ],
+    tableOfContents: [
+      { id: "what-consultants-do", title: "What Does a Data Analytics Consultant Do?" },
+      { id: "why-australian-businesses", title: "Why Australian Businesses Are Investing Now" },
+      { id: "delivery-models", title: "Local, Offshore, Hybrid, or In-House?" },
+      { id: "costs", title: "How Much Does It Cost in Australia?" },
+      { id: "privacy-compliance", title: "Australian Privacy Law & Your Choice" },
+      { id: "industry-use-cases", title: "Industries That Benefit Most" },
+      { id: "choosing-a-partner", title: "How to Choose the Right Partner" },
+      { id: "getting-started", title: "Getting Started" },
+    ],
+    about: [
+      "Data Analytics",
+      "Business Intelligence",
+      "Microsoft Power BI",
+      "Australia",
+      "Privacy Act 1988",
+      "Offshore Outsourcing",
+    ],
+    faqs: [
+      {
+        question: "How much does a data analytics consultant cost in Australia?",
+        answer:
+          "Indicatively, local senior analytics consultants charge around A$150–300 per hour and contract BI developers around A$100–180, while offshore BI developers typically cost A$30–90 per hour. Hybrid teams blend the two. Total cost depends on scope, so a single dashboard costs far less than a full data platform.",
+      },
+      {
+        question: "Can an Australian business use an offshore analytics partner legally?",
+        answer:
+          "Yes. The Privacy Act 1988 allows offshore work, but under Australian Privacy Principle 8 you generally remain accountable for how an overseas recipient handles personal information. Keeping data in your own Australian Azure tenant and granting consultants least-privilege access is the simplest way to manage that risk.",
+      },
+      {
+        question: "What is the time difference between India and Australia for project work?",
+        answer:
+          "India is 4.5 hours behind Australian Eastern Standard Time and 5.5 hours behind during daylight saving. That leaves roughly four to five shared working hours each day, typically from late morning to the end of the Sydney or Melbourne business day, which is enough for stand-ups and reviews.",
+      },
+      {
+        question: "Should I choose a local firm or an offshore analytics team?",
+        answer:
+          "Choose a local firm for on-site workshops, executive strategy, or projects where offshore access is restricted. Choose an offshore partner for cost-efficient dashboard builds, data engineering, and ongoing support. Many mid-sized Australian companies use a hybrid model, with a local lead and an offshore build team.",
+      },
+      {
+        question: "Can my data stay in Australia if I work with an offshore consultant?",
+        answer:
+          "Yes. Microsoft Azure's Australia East and Australia Southeast regions let you store data onshore. Offshore consultants can work inside your Australian tenant through named, access-controlled accounts, so your data stays stored on Australian infrastructure while the team works remotely. Remote access still counts as overseas disclosure, so the Privacy Act obligations above apply.",
+      },
+    ],
+  },
+  {
     slug: "power-bi-consulting-services-guide",
     title: "Power BI Consulting Services: Costs, Process & How to Choose a Partner (2026 Guide)",
     excerpt:

@@ -62,6 +62,10 @@ Explore live analytics dashboards for each industry:
 
 ## Blog & Guides
 
+- Data Analytics Consulting in India: Services, Costs & How to Choose a Firm (2026): https://goinsight.in/blog/data-analytics-consulting-india
+- Predictive Analytics in Retail: 7 Use Cases, Models & How to Get Started (2026): https://goinsight.in/blog/predictive-analytics-in-retail
+- Power BI Dashboard Design Best Practices: 15 Rules for Reports People Actually Use: https://goinsight.in/blog/power-bi-dashboard-design-best-practices
+- Data Analytics Consulting in Australia: A Buyer's Guide for 2026: https://goinsight.in/blog/data-analytics-consulting-australia
 - How to Use AI in Data Analytics (2026 guide): https://goinsight.in/blog/how-to-use-ai-in-data-analytics
 - Power BI Consulting Services: Costs, Process & Choosing a Partner: https://goinsight.in/blog/power-bi-consulting-services-guide
 - Microsoft Fabric vs Power BI: https://goinsight.in/blog/microsoft-fabric-vs-power-bi
