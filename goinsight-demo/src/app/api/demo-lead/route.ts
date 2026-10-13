@@ -4,7 +4,13 @@ import { NextResponse } from "next/server";
 // Authorization header and the From address.
 const CONTACT_EMAIL = process.env.CONTACT_EMAIL?.trim() || "gupta.anand3105@gmail.com";
 const RESEND_API_KEY = process.env.RESEND_API_KEY?.trim();
-const RESEND_FROM_EMAIL = process.env.RESEND_FROM_EMAIL?.trim();
+// goinsight.in has no Resend DKIM/SPF records in DNS, and its DMARC policy
+// quarantines unsigned mail, so Gmail blocks mail sent "from" hello@goinsight.in.
+// Resend's own sender is signed and delivers to the account owner's inbox.
+// Once goinsight.in is verified in Resend, set ENQUIRY_FROM_EMAIL in Vercel
+// (e.g. "GoInsight <hello@goinsight.in>") to switch back.
+const RESEND_FROM_EMAIL =
+  process.env.ENQUIRY_FROM_EMAIL?.trim() || "GoInsight Website <onboarding@resend.dev>";
 
 export async function POST(request: Request) {
   try {
@@ -36,9 +42,7 @@ export async function POST(request: Request) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          from:
-            RESEND_FROM_EMAIL ||
-            "GoInsight <onboarding@resend.dev>",
+          from: RESEND_FROM_EMAIL,
           to: [CONTACT_EMAIL],
           reply_to: email,
           subject: `New Demo Lead: ${email}`,
