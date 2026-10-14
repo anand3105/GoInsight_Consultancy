@@ -12,6 +12,18 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const postComponents: Record<string, React.ComponentType> = {
+  "snowflake-vs-bigquery-vs-fabric-vs-redshift": dynamic(
+    () => import("./posts/snowflake-vs-bigquery-vs-fabric-vs-redshift")
+  ),
+  "healthcare-data-analytics": dynamic(
+    () => import("./posts/healthcare-data-analytics")
+  ),
+  "supply-chain-analytics-guide": dynamic(
+    () => import("./posts/supply-chain-analytics-guide")
+  ),
+  "data-analytics-consulting-saudi-arabia": dynamic(
+    () => import("./posts/data-analytics-consulting-saudi-arabia")
+  ),
   "data-analytics-consulting-india": dynamic(
     () => import("./posts/data-analytics-consulting-india")
   ),
